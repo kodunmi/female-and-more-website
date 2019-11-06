@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.pages.home');
+});
+
+Route::get('/stories', function(){
+    return view('frontend.pages.stories');
 });
