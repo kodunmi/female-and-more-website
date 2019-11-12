@@ -8,28 +8,30 @@
     <title>The Fund</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- ================= Favicon ================== -->
     <link rel="icon" sizes="72x72" href="images/favicon-96x96.png">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900%7COpen+Sans:300,400,600,700,800" rel="stylesheet">
-    <!-- Font Awesome css-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/frontend/css/font-awesome.min.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Bootsrap css-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/frontend/css/bootstrap.min.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Magnific Popup-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="/frontend/css/magnific-popup.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Select2 -->
-    <link rel="stylesheet" href="css/select2.min.css">
-    <!-- Countdown css-->
-   <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" href="/frontend/css/select2.min.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <!-- REVOLUTION SLIDER STYLES -->
+    <link rel="stylesheet" type="text/css" href="/frontend/css/settings.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" type="text/css" href="/frontend/css/layers.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" type="text/css" href="/frontend/css/navigation.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Animate css-->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="/frontend/css/animate.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Style-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/frontend/css/style.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Color Swhicher css-->
-	<link data-style="color-style" rel="stylesheet" href="css/color-blue.css">
     <!-- Modernizr-->
-    <script src="js/modernizr-2.8.3.min.js"></script>
+    <script src="/frontend/js/modernizr-2.8.3.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/turbolinks.js"></script>
 </head>
 <body>
     <!--[if lt IE 8]>
@@ -50,27 +52,31 @@
     @include('frontend.layouts.footer')
     <!-- // End Footer  -->
     <!-- == jQuery Librery == -->
-    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="/frontend/js/jquery-2.2.4.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Bootsrap js File == -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/frontend/js/bootstrap.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == mixitup == -->
-    <script src="js/mixitup.min.js"></script>
+    <script src="/frontend/js/mixitup.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Select 2 == -->
-    <script src="js/select2.min.js"></script>
-    <!-- == Gallery popup == -->
-    <script src="js/jquery.colorbox-min.js"></script>
-    <!-- == Image Lazy Load == -->
-    <script src="js/jquery.lazy.min.js"></script>
+    <script src="/frontend/js/select2.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <!-- == Color box == -->
+    <script src="/frontend/js/jquery.colorbox-min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Slick == -->
-    <script src="js/slick.min.js"></script>
-    <!-- == Counter == -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- == Countdown == -->
-    <script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
+    <script src="/frontend/js/slick.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <!-- == Image Lazy Load == -->
+    <script src="/frontend/js/jquery.lazy.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <!-- == Wow js == -->
+    <script src="/frontend/js/wow.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <!-- == Revolution Slider JS == -->
+    <script src="/frontend/js/revolution/jquery.themepunch.tools.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/revolution/jquery.themepunch.revolution.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/revolution/extensions/revolution.extension.actions.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/revolution/extensions/revolution.extension.layeranimation.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/revolution/extensions/revolution.extension.navigation.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/revolution/extensions/revolution.extension.slideanims.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <script src="/frontend/js/revolution-active.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == custom Js File == -->
-    <script src="js/custom.js"></script>
+    <script src="/frontend/js/custom.js" data-turbolinks-eval="false"></script>
     </body>
 
 <!-- Mirrored from iglyphic.com/themes/html/thefund/lazyload/causes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Nov 2019 14:34:31 GMT -->

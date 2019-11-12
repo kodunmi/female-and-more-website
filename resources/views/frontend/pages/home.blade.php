@@ -275,7 +275,7 @@
      <div class="row">
          <div class="col-md-12">
              <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Our <span class="base-color">VOLUNTEERS</span> </h2>
+                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Our <span class="base-color">TEAM</span> </h2>
                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
              </div>
@@ -424,298 +424,122 @@
      </div>
  </div>
 </section>
-<section class="upcomming-event-section section-padding">
- <div class="container">
-     <div class="row">
-         <div class="col-md-7">
-             <div class="section-heading">
-                 <h2 class="section-title section-title--small wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">UPCOMING  <span class="base-color">EVENTS</span></h2>
-                 <div class="section-heading-separator section-heading-separator--left-align wow fadeInUpXsd" data-wow-duration=".9s" data-wow-delay=".1s"></div>
-             </div>
-             <div class="upcommig-event-carousel wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
-                 <div class="upcomming-event">
-                     <div class="upcomming-event__image-wrap">
-                         <img data-src="images/home/event-1.jpg" class="upcomming-event__image lazy" alt="event">
-                         <div class="loader"></div>
-                         <div class="upcomming-event__date">
-                             <i class="fa fa-calendar"></i>
-                             <span>21 jan</span>
-                         </div>
-                     </div>
-                     <div class="upcomming-event__text-content">
-                         <h4 class="upcomming-event__title"><a href="#">EDUCATION NEEDED</a></h4>
-                         <div class="upcomming-event__meta-info">
-                             <span class="upcomming-event__time"><i class="fa fa-clock-o base-color"></i>9.00 AM - 11.00 PM  </span>
-                             <span class="upcomming-event__place"><i class="fa fa-map-marker base-color"></i>29 Newyork City</span>
-                         </div>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio</p>
-                     </div>
-                 </div><!--/.upcomming-event-->
-                 <div class="upcomming-event">
-                     <div class="upcomming-event__image-wrap">
-                         <img data-src="images/home/event-1.jpg" class="upcomming-event__image lazy" alt="event">
-                         <div class="loader"></div>
-                         <div class="upcomming-event__date">
-                             <i class="fa fa-calendar"></i>
-                             <span>21 jan</span>
-                         </div>
-                     </div>
-                     <div class="upcomming-event__text-content">
-                         <h4 class="upcomming-event__title"><a href="#">EDUCATION NEEDED</a></h4>
-                         <div class="upcomming-event__meta-info">
-                             <span class="upcomming-event__time"><i class="fa fa-clock-o base-color"></i>9.00 AM - 11.00 PM  </span>
-                             <span class="upcomming-event__place"><i class="fa fa-map-marker base-color"></i>29 Newyork City</span>
-                         </div>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio</p>
-                     </div>
-                 </div><!--/.upcomming-event-->
-                 <div class="upcomming-event">
-                     <div class="upcomming-event__image-wrap">
-                         <img data-src="images/home/event-1.jpg" class="upcomming-event__image lazy" alt="event">
-                         <div class="loader"></div>
-                         <div class="upcomming-event__date">
-                             <i class="fa fa-calendar"></i>
-                             <span>21 jan</span>
-                         </div>
-                     </div>
-                     <div class="upcomming-event__text-content">
-                         <h4 class="upcomming-event__title"><a href="#">EDUCATION NEEDED</a></h4>
-                         <div class="upcomming-event__meta-info">
-                             <span class="upcomming-event__time"><i class="fa fa-clock-o base-color"></i>9.00 AM - 11.00 PM  </span>
-                             <span class="upcomming-event__place"><i class="fa fa-map-marker base-color"></i>29 Newyork City</span>
-                         </div>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio</p>
-                     </div>
-                 </div><!--/.upcomming-event-->
-                 <div class="upcomming-event">
-                     <div class="upcomming-event__image-wrap">
-                         <img data-src="images/home/event-1.jpg" class="upcomming-event__image lazy" alt="event">
-                         <div class="loader"></div>
-                         <div class="upcomming-event__date">
-                             <i class="fa fa-calendar"></i>
-                             <span>21 jan</span>
-                         </div>
-                     </div>
-                     <div class="upcomming-event__text-content">
-                         <h4 class="upcomming-event__title"><a href="#">EDUCATION NEEDED</a></h4>
-                         <div class="upcomming-event__meta-info">
-                             <span class="upcomming-event__time"><i class="fa fa-clock-o base-color"></i>9.00 AM - 11.00 PM  </span>
-                             <span class="upcomming-event__place"><i class="fa fa-map-marker base-color"></i>29 Newyork City</span>
-                         </div>
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio</p>
-                     </div>
-                 </div><!--/.upcomming-event-->
-             </div>
-         </div>
-         <div class="col-md-5">
-             <div class="section-heading">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">MAKE A <span class="base-color">DONATION</span></h2>
-                 <div class="section-heading-separator section-heading-separator--left-align wow fadeInUpXsd" data-wow-duration=".9s" data-wow-delay=".1s"></div>
-             </div>
-             <div class="donation-wrap wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </p>
-                 <form class="donation-form">
-                     <div class="input-group">
-                         <label class="input-group__label">I Want To Donate For</label>
-                         <select class="input-group__select hide-search--dropdown">
-                             <option value="0">Donate All</option>
-                             <option value="1">Build Water Well Closer to the People</option>
-                             <option value="2">Build Main Road That</option>
-                             <option value="3">Build a Village For Homeless</option>
-                             <option value="4">Build a College and University</option>
-                         </select>
-                     </div>
-                     <div class="input-group">
-                         <label class="input-group__label">Currency</label>
-                         <select class="selectpicker input-group__select">
-                             <option value="USD" selected="selected">United States Dollars</option>
-                             <option value="EUR">Euro</option>
-                             <option value="GBP">United Kingdom Pounds</option>
-                             <option value="DZD">Algeria Dinars</option>
-                             <option value="ARP">Argentina Pesos</option>
-                             <option value="AUD">Australia Dollars</option>
-                             <option value="ATS">Austria Schillings</option>
-                             <option value="BSD">Bahamas Dollars</option>
-                             <option value="BBD">Barbados Dollars</option>
-                             <option value="BEF">Belgium Francs</option>
-                             <option value="BMD">Bermuda Dollars</option>
-                             <option value="BRR">Brazil Real</option>
-                             <option value="BGL">Bulgaria Lev</option>
-                             <option value="CAD">Canada Dollars</option>
-                             <option value="CLP">Chile Pesos</option>
-                             <option value="CNY">China Yuan Renmimbi</option>
-                             <option value="CYP">Cyprus Pounds</option>
-                             <option value="CSK">Czech Republic Koruna</option>
-                             <option value="DKK">Denmark Kroner</option>
-                             <option value="NLG">Dutch Guilders</option>
-                             <option value="XCD">Eastern Caribbean Dollars</option>
-                             <option value="EGP">Egypt Pounds</option>
-                             <option value="FJD">Fiji Dollars</option>
-                             <option value="FIM">Finland Markka</option>
-                             <option value="FRF">France Francs</option>
-                             <option value="DEM">Germany Deutsche Marks</option>
-                             <option value="XAU">Gold Ounces</option>
-                             <option value="GRD">Greece Drachmas</option>
-                             <option value="HKD">Hong Kong Dollars</option>
-                             <option value="HUF">Hungary Forint</option>
-                             <option value="ISK">Iceland Krona</option>
-                             <option value="INR">India Rupees</option>
-                             <option value="IDR">Indonesia Rupiah</option>
-                             <option value="IEP">Ireland Punt</option>
-                             <option value="ILS">Israel New Shekels</option>
-                             <option value="ITL">Italy Lira</option>
-                             <option value="JMD">Jamaica Dollars</option>
-                             <option value="JPY">Japan Yen</option>
-                             <option value="JOD">Jordan Dinar</option>
-                             <option value="KRW">Korea (South) Won</option>
-                             <option value="LBP">Lebanon Pounds</option>
-                             <option value="LUF">Luxembourg Francs</option>
-                             <option value="MYR">Malaysia Ringgit</option>
-                             <option value="MXP">Mexico Pesos</option>
-                             <option value="NLG">Netherlands Guilders</option>
-                             <option value="NZD">New Zealand Dollars</option>
-                             <option value="NOK">Norway Kroner</option>
-                             <option value="PKR">Pakistan Rupees</option>
-                             <option value="XPD">Palladium Ounces</option>
-                             <option value="PHP">Philippines Pesos</option>
-                             <option value="XPT">Platinum Ounces</option>
-                             <option value="PLZ">Poland Zloty</option>
-                             <option value="PTE">Portugal Escudo</option>
-                             <option value="ROL">Romania Leu</option>
-                             <option value="RUR">Russia Rubles</option>
-                             <option value="SAR">Saudi Arabia Riyal</option>
-                             <option value="XAG">Silver Ounces</option>
-                             <option value="SGD">Singapore Dollars</option>
-                             <option value="SKK">Slovakia Koruna</option>
-                             <option value="ZAR">South Africa Rand</option>
-                             <option value="KRW">South Korea Won</option>
-                             <option value="ESP">Spain Pesetas</option>
-                             <option value="XDR">Special Drawing Right (IMF)</option>
-                             <option value="SDD">Sudan Dinar</option>
-                             <option value="SEK">Sweden Krona</option>
-                             <option value="CHF">Switzerland Francs</option>
-                             <option value="TWD">Taiwan Dollars</option>
-                             <option value="THB">Thailand Baht</option>
-                             <option value="TTD">Trinidad and Tobago Dollars</option>
-                             <option value="TRL">Turkey Lira</option>
-                             <option value="VEB">Venezuela Bolivar</option>
-                             <option value="ZMK">Zambia Kwacha</option>
-                             <option value="EUR">Euro</option>
-                             <option value="XCD">Eastern Caribbean Dollars</option>
-                             <option value="XDR">Special Drawing Right (IMF)</option>
-                             <option value="XAG">Silver Ounces</option>
-                             <option value="XAU">Gold Ounces</option>
-                             <option value="XPD">Palladium Ounces</option>
-                             <option value="XPT">Platinum Ounces</option>
-                         </select>
-                     </div>
-                     <div class="input-group">
-                         <label class="input-group__label">How Much Do You Wanr To Donate?</label>
-                         <select class="pament-select input-group__select">
-                             <option value="1">$50</option>
-                             <option value="2">$100</option>
-                             <option value="3">$200</option>
-                             <option value="4">$500</option>
-                             <option value="5">$1000</option>
-                             <option value="6">$5000</option>
-                             <option value="7">$10000</option>
-                         </select>
-                     </div>
-                     <div class="input-group">
-                         <label class="input-group__label">Payment Type</label>
-                         <div class="input-group__radio-wrap">
-                             <input type="radio" id="one-time" name="payment-type" value="1">
-                             <label for="one-time">One Time</label>
-                             <input type="radio" id="recurring" name="payment-type" value="2">
-                             <label for="recurring">Recurring</label>
-                         </div>
-                     </div>
-                     <input type="submit" value="Donet Now" class="btn"/>
-                 </form>
-             </div>
-         </div>
-     </div>
- </div>
-</section>
 <section class="blog-section section-padding ash-white-bg">
  <div class="container">
      <div class="row">
          <div class="col-md-12">
              <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Letest  <span class="base-color">Blog</span></h2>
+                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Letest  <span class="base-color">story</span></h2>
                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
              </div>
          </div>
      </div>
-     <div class="row row-eq-rs-height">
-         <div class="col-md-4 col-sm-6 col-xs-12">
-             <div class="blog-post wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
-                 <div class="blog-post__thumbnail-wrap">
-                     <img class="lazy" data-src="images/blog/blog-1.jpg"/>
-                     <div class="loader"></div>
-                     <div class="blog-post__like-comment">
-                         <span><i class="fa fa-comments"></i>22 Comment</span>
-                         <span>|</span>
-                         <span><i class="fa fa-thumbs-up"></i>105 Likes</span>
-                     </div>
-                 </div>
-                 <div class="blog-post__text-content">
-                     <h4 class="blog-post__title heading-label-four"><a href="#">EDUCATION FOR CHILDREN</a></h4>
-                     <div class="blog-post__meta-info">
-                         <span class="small-text"><i class="fa fa-user base-color"></i>Admin</span>
-                         <span class="small-text"><i class="fa fa-calendar base-color"></i>25 January</span>
-                     </div>
-                     <p>Lorem ipsum dolor sit amet, consectetur adip it scing elit, sed do eiusmod tempor incididu duut ut labore et dolore </p>
-                     <a href="#" class="btn">Read More</a>
-                 </div>
-             </div><!--/.blog-post-->
-         </div>
-         <div class="col-md-4 col-sm-6 col-xs-12">
-             <div class="blog-post wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s">
-                 <div class="blog-post__thumbnail-wrap">
-                     <img class="lazy" data-src="images/blog/blog-2.jpg"/>
-                     <div class="loader"></div>
-                     <div class="blog-post__like-comment">
-                         <span><i class="fa fa-comments"></i>22 Comment</span>
-                         <span>|</span>
-                         <span><i class="fa fa-thumbs-up"></i>105 Likes</span>
-                     </div>
-                 </div>
-                 <div class="blog-post__text-content">
-                     <h4 class="blog-post__title heading-label-four"><a href="#">EDUCATION FOR CHILDREN</a></h4>
-                     <div class="blog-post__meta-info">
-                         <span class="small-text"><i class="fa fa-user base-color"></i>Admin</span>
-                         <span class="small-text"><i class="fa fa-calendar base-color"></i>25 January</span>
-                     </div>
-                     <p>Lorem ipsum dolor sit amet, consectetur adip it scing elit, sed do eiusmod tempor incididu duut ut labore et dolore </p>
-                     <a href="#" class="btn">Read More</a>
-                 </div>
-             </div><!--/.blog-post-->
-         </div>
-         <div class="col-md-4 col-sm-6 col-xs-12">
-             <div class="blog-post wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s">
-                 <div class="blog-post__thumbnail-wrap">
-                     <img class="lazy" data-src="images/blog/blog-3.jpg"/>
-                     <div class="loader"></div>
-                     <div class="blog-post__like-comment">
-                         <span><i class="fa fa-comments"></i>22 Comment</span>
-                         <span>|</span>
-                         <span><i class="fa fa-thumbs-up"></i>105 Likes</span>
-                     </div>
-                 </div>
-                 <div class="blog-post__text-content">
-                     <h4 class="blog-post__title heading-label-four"><a href="#">EDUCATION FOR CHILDREN</a></h4>
-                     <div class="blog-post__meta-info">
-                         <span class="small-text"><i class="fa fa-user base-color"></i>Admin</span>
-                         <span class="small-text"><i class="fa fa-calendar base-color"></i>25 January</span>
-                     </div>
-                     <p>Lorem ipsum dolor sit amet, consectetur adip it scing elit, sed do eiusmod tempor incididu duut ut labore et dolore </p>
-                     <a href="#" class="btn">Read More</a>
-                 </div>
-             </div><!--/.blog-post-->
-         </div>
-     </div>
+     <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12 col-md-4">
+                    <div class="our-causes">
+                        <div class="our-causes__image-wrap pr">
+                            <div class="day_no">
+                                <span>Story One</span>
+                            </div>
+                            <img data-src="images/stories/oke.jpg" class="our-causes__image lazy" alt="">
+                            
+                            <div class="loader"></div>
+                            <div class="our-causes__percentage base-bg">
+                                <div class="our-causes__rised">
+                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
+                                </div>
+                                <div class="our-causes__goal">
+                                    <span class="nv-color">DAY &nbsp; </span> <span> ONE </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-causes__text-content text-center">
+                            <div class="progress-item">
+                                <div  class="progress-bg">
+                                    <div id='progress-one' class="progress-rate base-bg" data-value='80'>
+                                    </div>
+                                </div>
+                                <span class="progress-percent">80%</span>
+                            </div><!--/.progress-item-->
+                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                            <a href="#" class="btn">Read Story</a>
+                        </div>
+                    </div><!--/.our-causes-->
+                </div>
+                <div class="col-sm-6 col-xs-12 col-md-4">
+                    <div class="our-causes">
+                        <div class="our-causes__image-wrap pr">
+                            <div class="day_no">
+                                <span>Story Two</span>
+                            </div>
+                            <img data-src="images/stories/amina.jpg" class="our-causes__image lazy" alt="">
+                            
+                            <div class="loader"></div>
+                            <div class="our-causes__percentage base-bg">
+                                <div class="our-causes__rised">
+                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
+                                </div>
+                                <div class="our-causes__goal">
+                                    <span class="nv-color">DAY &nbsp; </span> <span> TWO </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-causes__text-content text-center">
+                            <div class="progress-item">
+                                <div  class="progress-bg">
+                                    <div id='progress-two' class="progress-rate base-bg" data-value='80'>
+                                    </div>
+                                </div>
+                                <span class="progress-percent">80%</span>
+                            </div><!--/.progress-item-->
+                            <h4 class="text-uppercase our-causes__title"><a href="#">amina slaoui</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                            <a href="#" class="btn">Read Story</a>
+                        </div>
+                    </div><!--/.our-causes-->
+                </div>
+                <div class="col-sm-6 col-xs-12 col-md-4">
+                    <div class="our-causes">
+                        <div class="our-causes__image-wrap pr">
+                            <div class="day_no">
+                                <span>Story Three</span>
+                            </div>
+                            <img data-src="images/stories/stella.jpg" class="our-causes__image lazy" alt="">
+                            
+                            <div class="loader"></div>
+                            <div class="our-causes__percentage base-bg">
+                                <div class="our-causes__rised">
+                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
+                                </div>
+                                <div class="our-causes__goal">
+                                    <span class="nv-color">DAY &nbsp; </span> <span> THREE </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="our-causes__text-content text-center">
+                            <div class="progress-item">
+                                <div  class="progress-bg">
+                                    <div id='progress-three' class="progress-rate base-bg" data-value='80'>
+                                    </div>
+                                </div>
+                                <span class="progress-percent">80%</span>
+                            </div><!--/.progress-item-->
+                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                            <a href="#" class="btn">Read Story</a>
+                        </div>
+                    </div><!--/.our-causes-->
+                </div>
+            </div>
+            <div class="fund-pagination mb30">
+                <a href="#" class="next">Read All</a>
+            </div>
+        </div>
+    </div>
  </div>
 </section>
 <section class="testimonial-section section-padding">
@@ -723,7 +547,7 @@
      <div class="row">
          <div class="col-md-12">
              <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">WHAT PEOPLE  <span class="base-color">SAY</span></h2>
+                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">QUOTES OF <span class="base-color">WISDOM</span></h2>
                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
              </div>
@@ -811,5 +635,56 @@
          </div>
      </div>
  </div>
-</section>  
+</section>
+<section class="sponser-section section-padding ash-white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading text-center">
+                    <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">OUR  <span class="base-color">Sponsors</span></h2>
+                    <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
+                    <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="client-carusel wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client1.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client2.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client3.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client4.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client5.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client6.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client2.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                    <div class="carusel-item pr">
+                        <img class="lazy" data-src="images/home/client1.png" alt="">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
 @endsection

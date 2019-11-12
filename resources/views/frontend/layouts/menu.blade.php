@@ -8,7 +8,7 @@
                     <ul class="menu-list">
                         <li><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
-                                <li><a href="index.html">Home One</a></li>
+                                <li><a href="{{ route('fam') }}" data-turbolinks-action="replace">Home One</a></li>
                                 <li><a href="index-two.html">Home Two</a></li>
                             </ul>
                         </li>
@@ -26,7 +26,7 @@
                         </li>
                         <li><a href="causes.html">Causes <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
-                                <li><a href="causes.html">Causes</a></li>
+                                <li><a href="{{ route('stories') }}" data-turbolinks-action="replace">Stories</a></li>
                                 <li><a href="causes-details.html">Causes Details</a></li>
                             </ul>
                         </li>
