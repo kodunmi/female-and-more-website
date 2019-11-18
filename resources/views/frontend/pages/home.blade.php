@@ -167,7 +167,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-book"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four"><a href="#">CHARITY FOR EDUCATION</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="#">About Female And More</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -176,7 +176,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-cutlery"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four"><a href="#">FEED FOR HUNGRY CHILD</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="#">How to participate</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -185,7 +185,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-home"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four"><a href="#">CHARITY FOR EDUCATION</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Starting a Chapters</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -194,7 +194,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-sun-o"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four"><a href="#">CHARITY FOR EDUCATION</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Causes</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -203,7 +203,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-gift"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four"><a href="#">FEED FOR HUNGRY CHILD</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Leaders Board</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -212,7 +212,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-heartbeat"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four"><a href="#">CHARITY FOR EDUCATION</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Gallery</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>

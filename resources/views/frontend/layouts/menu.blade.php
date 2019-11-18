@@ -18,12 +18,6 @@
                                 <li><a href="event-details.html">Event Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
                         <li><a href="causes.html">Causes <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
                                 <li><a href="{{ route('stories') }}" data-turbolinks-action="replace">Stories</a></li>
@@ -32,11 +26,33 @@
                         </li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="contact-us.html">Contact</a></li>
+                        
+                        @if (Auth::check())
+                        <li><a href="blog.html">My Account <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="{{ route('login') }}">Dashboard</a></li>
+                                <li><a href="{{ route('logout') }}">Logout</a></li>
+                            </ul>
+                        </li> 
+                        @else
+                            <li><a href="blog.html">Account <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                    <li><a href="{{ route('register') }}">Register</a></li>
+                                </ul>
+                            </li> 
+                        @endif
+                        
+                        
                    </ul>
                </nav><!--#easy-menu-->
                <div class="donate-button-wrap">
-                   <a href="donate.html" class="btn base-bg hidden-xs hidden-sm">Account</a>
-                   <a href="#" class="hidden-lg hidden-md" id="humbarger-icon"><i class="fa fa-bars"></i> </a>
+
+                   @if (Auth::check())
+                       <span>{{ auth()->user()->name }}</span>
+                    @else
+                        <a href="#" class="hidden-lg hidden-md" id="humbarger-icon"><i class="fa fa-bars"></i> </a>
+                    @endif
                </div>
             </div>
         </div>

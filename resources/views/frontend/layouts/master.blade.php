@@ -77,6 +77,10 @@
     <script src="/frontend/js/revolution-active.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == custom Js File == -->
     <script src="/frontend/js/custom.js" data-turbolinks-eval="false"></script>
+    <!-- page related js -->
+    <script>
+        @yield('js')
+    </script>
     </body>
 
 <!-- Mirrored from iglyphic.com/themes/html/thefund/lazyload/causes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Nov 2019 14:34:31 GMT -->

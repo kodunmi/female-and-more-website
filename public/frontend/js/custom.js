@@ -294,7 +294,7 @@
     /*** =====================================
     *   Fixed Menu
     * =====================================*/
-    $(document).on('turbolinks:load',function(){
+    $(document).ready(function(){
         $('.main-menu-area').toggleClass('main-menu-fixed');
         if($('.main-menu-fixed').length){
             var win = $(document);
