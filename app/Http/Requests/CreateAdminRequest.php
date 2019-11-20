@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 use Illuminate\Http\Request;
-
+use App\Admin;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreateAdminRequest extends FormRequest
@@ -25,7 +27,46 @@ class CreateAdminRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            
         ];
+    }
+
+    public function uploadAdminImage(){
+        
+        $uploadedFile = $this->image;
+        $this->fileName =  str_slug($this->name).'.'.$uploadedFile->getClientOriginalExtension();
+        $uploadedFile->storePubliclyAs('admins',$this->fileName);
+
+        return $this;
+    }
+
+    public function storeAdmin(){
+        $admin = new Admin;
+        $admin->name = $this->name;
+        $admin->email = $this->email;
+        $admin->department = $this->department;
+        $admin->position = $this->position;
+        $admin->image = 'admins/'.$this->fileName;
+        $admin->password = Hash::make($this->password);
+        $admin->save();
+
+        return $this;
+    }
+
+    public function logAdminIn(){
+        Auth::guard('admin')->attempt(['email' => $this->email, 'password' => $this->password]);
+    }
+
+    public function validateAdmin(){
+        $this->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:admins,email',
+            'password' => 'required|confirmed',
+            'department' => 'required',
+            'position' => 'required',
+            'image' => 'image|required|mimes:jpg,jpeg,png'
+        ]);
+
+        return $this;
     }
 }
