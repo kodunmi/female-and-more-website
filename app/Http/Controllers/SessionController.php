@@ -50,7 +50,7 @@ class SessionController extends Controller
         //this authenticate, login and redirect admin to dashboard
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
 
-            return redirect()->back();
+            return redirect()->route('admin.dashboard');
         }
 
     }
