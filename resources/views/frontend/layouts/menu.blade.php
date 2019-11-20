@@ -6,12 +6,7 @@
                 </div>
                 <nav id="easy-menu">
                     <ul class="menu-list">
-                        <li><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown">
-                                <li><a href="{{ route('fam') }}" data-turbolinks-action="replace">Home One</a></li>
-                                <li><a href="index-two.html">Home Two</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="{{ route('fam') }}" data-turbolinks-action="replace">Home</a></li>
                         <li><a href="events.html">Events <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
                                 <li><a href="events.html">Events</a></li>

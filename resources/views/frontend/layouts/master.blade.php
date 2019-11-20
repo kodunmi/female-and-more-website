@@ -13,13 +13,13 @@
     <link rel="icon" sizes="72x72" href="images/favicon-96x96.png">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900%7COpen+Sans:300,400,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="/frontend/css/font-awesome.min.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Bootsrap css-->
-    <link rel="stylesheet" href="/frontend/css/bootstrap.min.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Magnific Popup-->
     <link rel="stylesheet" href="/frontend/css/magnific-popup.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Select2 -->
-    <link rel="stylesheet" href="/frontend/css/select2.min.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" href="{{ asset('frontend/css/select2.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- REVOLUTION SLIDER STYLES -->
     <link rel="stylesheet" type="text/css" href="/frontend/css/settings.css" data-turbolinks-track="true" data-turbolinks-eval="false">
     <link rel="stylesheet" type="text/css" href="/frontend/css/layers.css" data-turbolinks-track="true" data-turbolinks-eval="false">

@@ -167,7 +167,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-book"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four cap"><a href="#">About Female And More</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="{{ route('about') }}" data-turbolinks-action="replace">About Female And More</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -176,7 +176,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-cutlery"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four cap"><a href="#">How to participate</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="{{ route('how-to-participate') }}" data-turbolinks-action="replace">How to participate</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -185,7 +185,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-home"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Starting a Chapters</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="{{ route('how-to-start-a-chapter') }} " data-turbolinks-action="replace">Starting a Chapters</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -194,7 +194,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-sun-o"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Causes</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="{{ route('causes') }}" data-turbolinks-action="replace">Causes</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -203,7 +203,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-gift"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Leaders Board</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="{{ route('learders-board') }}" data-turbolinks-action="replace">Leaders Board</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -212,7 +212,7 @@
                  <div class="feature-item__icon-wrap">
                      <i class="feature-item__icon fa fa-heartbeat"></i>
                  </div>
-                 <h4 class="feature-item__title heading-label-four cap"><a href="#">Gallery</a></h4>
+                 <h4 class="feature-item__title heading-label-four cap"><a href="{{ route('gallary') }}" data-turbolinks-action="replace">Gallery</a></h4>
                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  dolore magna aliqua. Ut enim ad minim </p>
              </div><!--/.feature-item-->
          </div>
@@ -264,160 +264,6 @@
                      <h4 class="help-us__title heading-label-four">ADOPT A CHILD</h4>
                      <p>Lorem ipsum dolor sit amet, risus adipisci elit. Praesent laoreet condimentum</p>
                      <a href="#" class="btn">Read More</a>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
-</section>
-<section class="volunteer-section section-padding ash-white-bg">
- <div class="container">
-     <div class="row">
-         <div class="col-md-12">
-             <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Our <span class="base-color">TEAM</span> </h2>
-                 <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-                 <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
-             </div>
-         </div>
-     </div>
-     <div class="row row-eq-rs-height">
-         <div class="col-md-4 col-sm-6 col-xs-12">
-             <div class="fund-volunteer text-center wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
-                 <div class="fund-volunteer__photo-wrap pr">
-                     <img data-src="images/home/fam1.jpg" class="img-circle fund-volunteer__photo lazy" />
-                     <div class="loader"></div>
-                 </div>
-                 <div class="fund-volunteer__text-content">
-                     <h3 class="fund-volunteer__name">PETERSON SMITH</h3>
-                     <div class="section-heading-separator section-heading-separator--small"></div>
-                     <p>Lorem ipsum dolor sit amet, consectetur the and adipiscing elit, sed do eiusmod temp  labore et dolore magna aliqua for</p>
-                     <ul class="list-inline round-social-icons mb30">
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                     <a href="#" class="btn">Read More</a>
-                 </div>
-             </div><!--/.fund-volunteer-->
-         </div>
-         <div class="col-md-4 col-sm-6 col-xs-12">
-             <div class="fund-volunteer text-center wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s">
-                 <div class="fund-volunteer__photo-wrap pr">
-                     <img data-src="images/home/fam1.jpg" class="img-circle fund-volunteer__photo lazy" />
-                     <div class="loader"></div>
-                 </div>
-                 <div class="fund-volunteer__text-content">
-                     <h3 class="fund-volunteer__name">SERENA SANION</h3>
-                     <div class="section-heading-separator section-heading-separator--small"></div>
-                     <p>Lorem ipsum dolor sit amet, consectetur the and adipiscing elit, sed do eiusmod temp  labore et dolore magna aliqua for</p>
-                     <ul class="list-inline round-social-icons mb30">
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                     <a href="#" class="btn">Read More</a>
-                 </div>
-             </div><!--/.fund-volunteer-->
-         </div>
-         <div class="col-md-4 col-sm-6 col-xs-12">
-             <div class="fund-volunteer text-center wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".6s">
-                 <div class="fund-volunteer__photo-wrap pr">
-                     <img data-src="images/home/fam1.jpg" class="img-circle fund-volunteer__photo lazy" />
-                     <div class="loader"></div>
-                 </div>
-                 <div class="fund-volunteer__text-content">
-                     <h3 class="fund-volunteer__name">PETERSON SMITH</h3>
-                     <div class="section-heading-separator section-heading-separator--small"></div>
-                     <p>Lorem ipsum dolor sit amet, consectetur the and adipiscing elit, sed do eiusmod temp  labore et dolore magna aliqua for</p>
-                     <ul class="list-inline round-social-icons mb30">
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                     </ul>
-                     <a href="#" class="btn">Read More</a>
-                 </div>
-             </div><!--/.fund-volunteer-->
-         </div>
-     </div>
- </div>
-</section>
-<section class="gallery-section section-padding all-text-white lazy" data-src="images/home/gallery-bg.jpg">
- <div class="container-fluid">
-     <div class="row">
-         <div class="col-md-12">
-             <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">OUR <span class="base-color">GALLERY</span></h2>
-                 <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-                 <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
-             </div>
-         </div>
-     </div>
-     <div class="row">
-         <div class="col-md-12">
-             <div class="text-center pdb35 wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
-                 <ul class="list-inline filter-options">
-                     <li><a href="#!" class="filter-options__item active filter btn" data-filter=".all">Show All</a></li>
-                     <li><a href="#!" class="filter-options__item filter btn" data-filter=".charity">Charity</a></li>
-                     <li><a href="#!" class="filter-options__item filter btn" data-filter=".children">Children</a></li>
-                     <li><a href="#!" class="filter-options__item filter btn" data-filter=".natureal">Natureal</a></li>
-                 </ul>
-             </div>
-         </div>
-     </div>
-     <div class="row wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
-         <div class="col-md-12">
-             <div class="row row-eq-height" id="mixitup-grid">
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all charity natureal">
-                     <a class="gallery-item pr  wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s" href="images/home/popup/gallery-1.jpg" >
-                         <img  data-src="images/home/gallery-1.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all charity children natureal">
-                     <a class="gallery-item  wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s" href="images/home/popup/gallery-2.jpg">
-                         <img  data-src="images/home/gallery-2.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all children natureal">
-                     <a class="gallery-item  wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".6s" href="images/home/popup/gallery-3.jpg">
-                         <img  data-src="images/home/gallery-3.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all charity children">
-                     <a class="gallery-item  wow fadeInUpSmd"  data-wow-duration="1.5s" data-wow-delay=".8s" href="images/home/popup/gallery-4.jpg">
-                         <img  data-src="images/home/gallery-4.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all children natureal">
-                     <a class="gallery-item  wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s" href="images/home/popup/gallery-5.jpg">
-                         <img  data-src="images/home/gallery-5.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all charity children">
-                     <a class="gallery-item  wow fadeInUpSmd"  data-wow-duration="1.5s" data-wow-delay=".4s" href="images/home/popup/gallery-6.jpg">
-                         <img  data-src="images/home/gallery-6.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all charity natureal">
-                     <a class="gallery-item  wow fadeInUpSmd"  data-wow-duration="1.5s" data-wow-delay=".6s" href="images/home/popup/gallery-7.jpg">
-                         <img  data-src="images/home/gallery-7.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 mix all children natureal">
-                     <a class="gallery-item  wow fadeInUpSmd"  data-wow-duration="1.5s" data-wow-delay=".8s" href="images/home/popup/gallery-8.jpg">
-                         <img  data-src="images/home/gallery-8.jpg" class="gallery-item__photo lazy"  />
-                         <div class="loader"></div>
-                     </a><!--/.portfolio-item-->
                  </div>
              </div>
          </div>

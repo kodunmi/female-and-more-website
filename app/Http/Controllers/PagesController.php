@@ -13,17 +13,17 @@ class PagesController extends Controller
 
     public function aboutFam()
     {
-        return view('frontend.pages.about-fam');
+        return view('frontend.pages.aboutFam');
     }
 
     public function howToParticipate()
     {
-        return view('frontend.pages.how-to-participate');
+        return view('frontend.pages.howToParticipate');
     }
 
     public function howToStartAChapter()
     {
-        return view('frontend.pages.how-to-start-a-chapter');
+        return view('frontend.pages.howToStartAChapter');
     }
 
     public function causes()
@@ -33,7 +33,7 @@ class PagesController extends Controller
 
     public function leardersBoard()
     {
-        return view('frontend.pages.learders-board');
+        return view('frontend.pages.leardersBoard');
     }
 
     public function gallary()
