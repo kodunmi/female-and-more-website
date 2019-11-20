@@ -43,6 +43,7 @@ Route::get('/stories', function(){
 Auth::routes(['verify' => true]);
 Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/dashboard', 'HomeController@dashboard')->name('user.dashboard')->middleware('verified');
 
 Route::get('/admin/dashboard', function () {
     return view('admin.pages.home');
