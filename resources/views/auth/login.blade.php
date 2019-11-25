@@ -20,7 +20,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <div class="card">
-                <div class="card-header pdb20">{{ __('Login') }}</div>
+                <div class="card-header pdb20 mb20 gradient-bg register-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form id="login-form" method="POST" action="{{ route('login') }}">
@@ -74,13 +74,14 @@
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('Forgot Password?') }}
                                     </a>
                                 @endif
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="card-footer gradient-bg register-header"> female and more</div>
             </div>
         </div>
     </div>

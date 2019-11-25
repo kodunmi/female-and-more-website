@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -27,6 +29,16 @@ class HomeController extends Controller
     }
     public function dashboard()
     {
-        return view('frontend.pages.dashboard');
+        //$user = User::find(Auth::id());
+
+        $url = url('/register/');
+
+        // auth()->user()->generateAffiliateId();
+
+        //  $link = $user->getAffiliateLink($url);
+
+        // dd(auth()->user()->referrals()->count());
+
+        return view('frontend.pages.dashboard')->with([ 'url' => $url]);
     }
 }

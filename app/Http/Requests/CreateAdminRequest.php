@@ -35,7 +35,7 @@ class CreateAdminRequest extends FormRequest
         
         $uploadedFile = $this->image;
         $this->fileName =  str_slug($this->name).'.'.$uploadedFile->getClientOriginalExtension();
-        $uploadedFile->storePubliclyAs('admins',$this->fileName);
+        $uploadedFile->storePubliclyAs('public/admins',$this->fileName);
 
         return $this;
     }
@@ -46,7 +46,7 @@ class CreateAdminRequest extends FormRequest
         $admin->email = $this->email;
         $admin->department = $this->department;
         $admin->position = $this->position;
-        $admin->image = 'admins/'.$this->fileName;
+        $admin->image = 'storage/admins/'.$this->fileName;
         $admin->password = Hash::make($this->password);
         $admin->save();
 

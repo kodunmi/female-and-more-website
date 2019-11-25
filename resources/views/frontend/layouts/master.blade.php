@@ -31,6 +31,8 @@
     <!-- Color Swhicher css-->
     <!-- Modernizr-->
     <script src="/frontend/js/modernizr-2.8.3.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <!-- date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" data-turbolinks-track="true" data-turbolinks-eval="false"/>
     <script src="/frontend/js/turbolinks.js"></script>
 </head>
 <body>
@@ -76,6 +78,9 @@
     <script src="/frontend/js/revolution/extensions/revolution.extension.slideanims.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <script src="/frontend/js/revolution-active.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == custom Js File == -->
+    <!-- bootstarp date picker cdn -->
+    <!-- jquery validator -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <script src="/frontend/js/custom.js" data-turbolinks-eval="false"></script>
     <!-- page related js -->
     <script>

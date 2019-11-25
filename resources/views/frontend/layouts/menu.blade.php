@@ -25,7 +25,7 @@
                         @if (Auth::check())
                         <li><a href="blog.html">My Account <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
-                                <li><a href="{{ route('login') }}">Dashboard</a></li>
+                                <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
                                 <li><a href="{{ route('logout') }}">Logout</a></li>
                             </ul>
                         </li> 
@@ -44,10 +44,9 @@
                <div class="donate-button-wrap">
 
                    @if (Auth::check())
-                       <span>{{ auth()->user()->name }}</span>
-                    @else
-                        <a href="#" class="hidden-lg hidden-md" id="humbarger-icon"><i class="fa fa-bars"></i> </a>
+                       <span class="hidden-sm hidden-xs">{{ auth()->user()->name }}</span>
                     @endif
+                    <a href="#" class="hidden-lg hidden-md" id="humbarger-icon"><i class="fa fa-bars"></i> </a>
                </div>
             </div>
         </div>

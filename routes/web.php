@@ -41,6 +41,7 @@ Route::get('/stories', function(){
 })->name('stories');
 
 Auth::routes(['verify' => true]);
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware('affiliate.tracking');
 Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/dashboard', 'HomeController@dashboard')->name('user.dashboard')->middleware('verified');

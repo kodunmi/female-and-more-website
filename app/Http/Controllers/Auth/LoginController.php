@@ -27,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/dashboard';
     /**
      * Where to redirect users after logout.
      *
@@ -37,9 +37,6 @@ class LoginController extends Controller
         return redirect('/');
     }
 
-    protected function redirectPath(){
-        return '/';
-    }
 
     /**
      * Create a new controller instance.
