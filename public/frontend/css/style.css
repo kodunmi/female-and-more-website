@@ -737,6 +737,14 @@
     .mr-auto {
       margin-right: auto;
     }
+
+    .mr15{
+      margin-right: 15px;
+    }
+
+    .ml15{
+      margin-left: 15px;
+    }
     
     .no-margin {
       margin: 0 !important;
@@ -4642,6 +4650,7 @@ textarea.form-control.is-invalid {
   /* background-color: #be169a; */
   width: 100%;
   position: relative;
+  margin-top: 70px;
 }
 
 .profile-gtg{
@@ -4685,21 +4694,20 @@ textarea.form-control.is-invalid {
 
 .change-profile-btn{
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: -80px;
+  right: 5px;
   border-radius: 30px 30px 30px 30px !important;
 }
 
 .profile-body-body{
-  position: absolute;
-  top: 100px;
+  margin-top: 100px;
 }
 .personal-info{
   color: #be169a;
   font-size: 13px;
   position: absolute;
   left: 10px;
-  top: 50px;
+  top: -50px;
   text-align: center;
 }
 

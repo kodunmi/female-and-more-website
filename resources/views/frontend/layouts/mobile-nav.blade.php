@@ -23,7 +23,7 @@
         </div>
         <div class="nav-username">{{ auth()->user()->name }}</div>
         <div class="nav-email">{{ auth()->user()->email }}</div>
-        <div style="font-size: 13px; position: absolute; top: 150px; left: 5px;" class="text-muted"> joined {{ auth()->user()->created_at->diffForHumans() }}</div>
+        <div style="font-size: 13px; position: absolute; top: 150px; left: 5px;" class="text-muted">{{ '@'.auth()->user()->username }}</div>
         @endauth
        </div> 
     <div class="mobile-inner">

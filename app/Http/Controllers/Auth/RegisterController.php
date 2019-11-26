@@ -42,7 +42,53 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    
+
+    /**
+     * stores user referrer id into session
+     *
+     * @return null
+     */
+    public function storeReforrerId($request){
+        if($request->has('ref')){
+            $userId = User::where('affiliate_id',$request->query('ref'))->get();
+            session(['user_id' => $userId]);
+        }
+    }
+
+    /**
+     * this method updates referrer's score in the database
+     *
+     * @return null
+     */
+    public function updateReferrerScore(){
+        if(session()->has('user_id')){
+            User::find(session()->get('user_id'))->first()->increment('referral_score', 5);
+        }
+    }
+
+    /**
+     * this method updates total score in the database
+     *
+     * @return null
+     */
+    public function updateTotalScore(){
+        if(session()->has('user_id')){
+            User::find(session()->get('user_id'))->first()->increment('total_score', 5);
+        }
+    }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm(Request $request)
+    {
+        $this->storeReforrerId($request);
+       
+        return view('auth.register');
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -75,6 +121,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        $this->updateReferrerScore();
+        $this->updateTotalScore();
+
         $uploadedFile = $data['image'];
         $fileName =  Hash::make($data['email']).'.'.$uploadedFile->getClientOriginalExtension();
         $uploadedFile->storePubliclyAs('public/users',$fileName);

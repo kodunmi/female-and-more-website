@@ -210,26 +210,26 @@
     /** =====================================
     * Event Countdown
     * =====================================***/
-    function musicaEvents() {
-        var musicaEvent = $('.musica-counter-active');
-        var len = musicaEvent.length;
-        for (var i = 0; i < len; i++) {
-            var musicaEventId = '#' + musicaEvent[i].id,
-            dataValueYear = $(musicaEventId).attr('data-value-year'),
-			dataValueMonth = $(musicaEventId).attr('data-value-month'),
-			dataValueDay = $(musicaEventId).attr('data-value-day'),
-			dataValueZone = $(musicaEventId).attr('data-value-zone');
-            $(musicaEventId).countdown({
-				labels: ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Mins', 'Secs'],
-		        until: $.countdown.UTCDate(dataValueZone, dataValueYear, dataValueMonth, dataValueDay),
-		        format: 'dHMS',
-		        padZeroes: true
-		    });
-        }
-    }
-    if ($('.musica-counter-active').length) {
-        musicaEvents();
-    }
+    // function musicaEvents() {
+    //     var musicaEvent = $('.musica-counter-active');
+    //     var len = musicaEvent.length;
+    //     for (var i = 0; i < len; i++) {
+    //         var musicaEventId = '#' + musicaEvent[i].id,
+    //         dataValueYear = $(musicaEventId).attr('data-value-year'),
+	// 		dataValueMonth = $(musicaEventId).attr('data-value-month'),
+	// 		dataValueDay = $(musicaEventId).attr('data-value-day'),
+	// 		dataValueZone = $(musicaEventId).attr('data-value-zone');
+    //         $(musicaEventId).countdown({
+	// 			labels: ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Mins', 'Secs'],
+	// 	        until: $.countdown.UTCDate(dataValueZone, dataValueYear, dataValueMonth, dataValueDay),
+	// 	        format: 'dHMS',
+	// 	        padZeroes: true
+	// 	    });
+    //     }
+    // }
+    // if ($('.musica-counter-active').length) {
+    //     musicaEvents();
+    // }
     /*** =====================================
     * Upcomming Event Carusel
     * ==================================== ***/
@@ -294,24 +294,24 @@
     /*** =====================================
     *   Fixed Menu
     * =====================================*/
-    $(document).ready(function(){
-        $('.main-menu-area').toggleClass('main-menu-fixed');
-        if($('.main-menu-fixed').length){
-            var win = $(document);
-            var menuTerget = $('.main-menu-fixed');
-            var menuOffset = menuTerget.offset().top;
-            win.on('scroll', function() {
-             if (menuOffset < win.scrollTop()) {
-                 menuTerget.addClass('main-menu-fix-active');
-             } else {
-                 menuTerget.removeClass('main-menu-fix-active');
-             }
-            });
-        }
-        if(!$('.main-menu-fixed').length){
-            $('.main-menu-area').removeClass('main-menu-fix-active');
-        }
-    });
+    // $(document).ready(function(){
+    //     $('.main-menu-area').toggleClass('main-menu-fixed');
+    //     if($('.main-menu-fixed').length){
+    //         var win = $(document);
+    //         var menuTerget = $('.main-menu-fixed');
+    //         var menuOffset = menuTerget.offset().top;
+    //         win.on('scroll', function() {
+    //          if (menuOffset < win.scrollTop()) {
+    //              menuTerget.addClass('main-menu-fix-active');
+    //          } else {
+    //              menuTerget.removeClass('main-menu-fix-active');
+    //          }
+    //         });
+    //     }
+    //     if(!$('.main-menu-fixed').length){
+    //         $('.main-menu-area').removeClass('main-menu-fix-active');
+    //     }
+    // });
     $('.backtop-top-check label').on('click',function(){
         $('#toTop').toggleClass('toTop-hide');
     });

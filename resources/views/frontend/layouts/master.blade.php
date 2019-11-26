@@ -17,18 +17,22 @@
     <!-- Bootsrap css-->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Magnific Popup-->
-    <link rel="stylesheet" href="/frontend/css/magnific-popup.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{ asset('frontend/css/select2.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <!-- notiny -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/snackbar.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- REVOLUTION SLIDER STYLES -->
-    <link rel="stylesheet" type="text/css" href="/frontend/css/settings.css" data-turbolinks-track="true" data-turbolinks-eval="false">
-    <link rel="stylesheet" type="text/css" href="/frontend/css/layers.css" data-turbolinks-track="true" data-turbolinks-eval="false">
-    <link rel="stylesheet" type="text/css" href="/frontend/css/navigation.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/settings.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/layers.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/navigation.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Animate css-->
-    <link rel="stylesheet" href="/frontend/css/animate.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Style-->
-    <link rel="stylesheet" href="/frontend/css/style.css" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Color Swhicher css-->
+    <link rel="stylesheet" href="{{ asset('frontend/css/jquery.countdown.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
+    <!-- jquery count down css -->
     <!-- Modernizr-->
     <script src="/frontend/js/modernizr-2.8.3.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- date picker -->
@@ -50,7 +54,9 @@
     @include('frontend.layouts.header')
     @include('frontend.layouts.mobile-nav')
     @include('frontend.layouts.menu')
-    @yield('content')
+    <div id="app">
+         @yield('content')
+    </div>
     @include('frontend.layouts.footer')
     <!-- // End Footer  -->
     <!-- == jQuery Librery == -->
@@ -69,6 +75,8 @@
     <script src="/frontend/js/jquery.lazy.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Wow js == -->
     <script src="/frontend/js/wow.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+    <!-- == Notiny js == -->
+    <script src="/frontend/js/snackbar.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Revolution Slider JS == -->
     <script src="/frontend/js/revolution/jquery.themepunch.tools.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <script src="/frontend/js/revolution/jquery.themepunch.revolution.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
@@ -86,6 +94,7 @@
     <script>
         @yield('js')
     </script>
+    <!-- <script src="/js/app.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script> -->
     </body>
 
 <!-- Mirrored from iglyphic.com/themes/html/thefund/lazyload/causes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Nov 2019 14:34:31 GMT -->

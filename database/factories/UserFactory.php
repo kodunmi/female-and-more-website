@@ -18,6 +18,14 @@ use Illuminate\Support\Str;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
+        'username' => $faker->firstNameMale,
+        'country' => $faker->country,
+        'state' => $faker->state,
+        'image' => $faker->imageUrl($width = 20, $height = 20),
+        'goal_to_greatness' => $faker->realText($maxNbChars = 10 , $indexSize = 2),
+        'referral_score' => $faker->numberBetween($min = 10, $max = 100),
+        'story_score' => $faker->numberBetween($min = 10, $max = 100),
+        'total_score' => $faker->numberBetween($min = 100, $max = 1000),
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),

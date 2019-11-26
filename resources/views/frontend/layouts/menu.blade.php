@@ -1,4 +1,4 @@
-<div class="main-menu-area">
+<div class="main-menu-area main-menu-fix-active main-menu-fixed">
         <div class="container">
             <div class="menu-logo">
                 <div class="logo">
