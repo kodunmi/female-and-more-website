@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+use App\User;
 
 class PagesController extends Controller
 {
@@ -33,7 +34,9 @@ class PagesController extends Controller
 
     public function leardersBoard()
     {
-        return view('frontend.pages.leardersBoard');
+        $users = User::orderBy('total_score', 'desc')->get();
+        // dd($users);
+        return view('frontend.pages.leardersBoard')->with([ 'users' => $users]);
     }
 
     public function gallary()

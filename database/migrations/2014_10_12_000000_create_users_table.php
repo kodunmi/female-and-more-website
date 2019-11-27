@@ -24,9 +24,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('referral_score')->default('0');
-            $table->string('story_score')->default('0');
-            $table->string('total_score')->default('0');
+            $table->integer('referral_score')->default('0');
+            $table->integer('story_score')->default('0');
+            $table->integer('total_score')->default('0');
             $table->rememberToken();
             $table->timestamps();
         });
