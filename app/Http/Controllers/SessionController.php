@@ -1,16 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Str;
-use App\Admin;
 use App\Http\Requests\CreateAdminRequest;
 use App\Http\Requests\LogoutAdminRequest;
 use App\Http\Requests\LoginAdminRequest;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Image;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Http\Request;
+
 
 class SessionController extends Controller
 {
@@ -18,16 +12,16 @@ class SessionController extends Controller
         $this->middleware('guest:admin')->except('logout');
     }
 
-    
+
 
     public function showRegistrationForm(){
 
         return view('admin.pages.register');
     }
     public function register(CreateAdminRequest $request){
-       
+
         $request->validateAdmin()->uploadAdminImage()->storeAdmin()->logAdminIn();
-        
+
         return redirect()->route('admin.dashboard');
 
     }
@@ -42,7 +36,7 @@ class SessionController extends Controller
 
         $request->validateAdmin();
 
-        
+
         if ($request->isAdmin()) {
 
             $request->session()->flash('message', 'welcome back');

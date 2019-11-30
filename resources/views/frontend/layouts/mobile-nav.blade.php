@@ -17,7 +17,7 @@
             <div class="image_outer_container">
                 <div class="image_inner_container-nav">
                     <img class="nav-img"
-                        src="{{ asset(auth()->user()->image) }}">
+                        src="{{ asset('storage/users/'.auth()->user()->image) }}">
                 </div>
             </div>
         </div>
@@ -25,13 +25,13 @@
         <div class="nav-email">{{ auth()->user()->email }}</div>
         <div style="font-size: 13px; position: absolute; top: 150px; left: 5px;" class="text-muted">{{ '@'.auth()->user()->username }}</div>
         @endauth
-       </div> 
+       </div>
     <div class="mobile-inner">
-       
+
         <span class="mobile-menu-close"><i class="icon-icomooon-close"></i></span>
         <ul class="menu-accordion">
-            
-            @auth 
+
+            @auth
             <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
             <li><a href="{{ route('logout') }}">Logout</a></li>
              @endauth

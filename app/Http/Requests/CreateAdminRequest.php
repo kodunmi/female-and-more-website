@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Requests;
-use Illuminate\Http\Request;
 use App\Admin;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -27,12 +26,12 @@ class CreateAdminRequest extends FormRequest
     public function rules()
     {
         return [
-            
+
         ];
     }
 
     public function uploadAdminImage(){
-        
+
         $uploadedFile = $this->image;
         $this->fileName =  str_slug($this->name).'.'.$uploadedFile->getClientOriginalExtension();
         $uploadedFile->storePubliclyAs('public/admins',$this->fileName);

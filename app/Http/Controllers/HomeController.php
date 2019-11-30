@@ -27,18 +27,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function dashboard()
-    {
-        //$user = User::find(Auth::id());
-
-        $url = url('/register/');
-
-        // auth()->user()->generateAffiliateId();
-
-        //  $link = $user->getAffiliateLink($url);
-
-        // dd(auth()->user()->referrals()->count());
-
-        return view('frontend.pages.dashboard')->with([ 'url' => $url]);
-    }
 }

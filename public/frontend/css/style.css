@@ -4795,3 +4795,240 @@ textarea.form-control.is-invalid {
       display: block !important;
     }
   }
+.story-image-container{
+    top: 0;
+  height: 410px;
+  /* background-color: #be169a; */
+  width: 100%;
+  position: relative;
+  margin-top: 70px;
+  z-index: -1;
+}
+
+.story-image{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    height: 100%;
+    transform: translateY(-50%) translateX(50%);
+}
+.story-header{
+    height: 300px;
+    background-color:#be169a;
+    position: relative;
+}
+
+.day-number{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FEF593;
+
+    position: absolute;
+    width: 29px;
+    height: 36px;
+    left: 23px;
+    top: 35px;
+}
+.story-title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #FFFFFF;
+
+    position: absolute;
+    height: 16px;
+    left: 23px;
+    top: 70px;
+    text-transform: uppercase;
+}
+
+.icon-title h3{
+    position: absolute;
+    margin-right: 10px;
+    height: 119px;
+    left: 23px;
+    top: 100px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FEF593;
+    text-transform: capitalize;
+}
+.story-body{
+    height: 1027px;
+    width: 100%;
+    background:white;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: -25px;
+
+    position: relative;
+    padding-top: 40px;
+    /* border-top-right-radius: 30px;
+    border-top-left-radius: 30px; */
+
+    /* border-collapse: separate; */
+    /* overflow: hidden;
+    perspective: 1px; */
+}
+
+@media(max-width: 480px){
+    .story-body{
+        height: 1120px;
+    }
+}
+
+.quote-container{
+    position: absolute;
+    right: 50%;
+    transform:  translateX(50%);
+}
+
+@media (max-width: 480px) {
+    .quote-container{
+       width: 300px;
+    }
+  }
+.quote{
+    text-align:center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #732171;
+    margin-bottom: 0;
+}
+.quote-name{
+    position: absolute;
+    right: 10px;
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #732171;
+}
+.tabs{
+    margin-top:250px;
+    font-size:15px;
+    padding:0px;
+    list-style:none;
+    background:#fff;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+    display:inline-block;
+    border-radius:50px;
+    position:relative;
+  }
+  .tab-content{
+      display: none;
+  }
+  .show{
+      display: block;
+  }
+
+  .tabs a{
+    text-decoration:none;
+    color: #777;
+    text-transform:uppercase;
+    padding:10px 20px;
+    display:inline-block;
+    position:relative;
+    z-index:1;
+    transition-duration:0.6s;
+  }
+
+  @media(max-width:480px){
+    .tabs a{
+        padding:10px 10px;
+    }
+  }
+
+  .tabs a.active{
+    color:#fff;
+  }
+
+  .tabs a i{
+    margin-right:5px;
+  }
+
+  .tabs .selector{
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:1;
+    border-radius:50px;
+    transition-duration:0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    background: #05abe0;
+    background: -moz-linear-gradient(-45deg, #c1089e 20%, #ff4e00 100%);
+    background: -webkit-linear-gradient(-45deg, #c1089e 20%, #ff4e00 100%);
+    background: linear-gradient(-45deg, #c1089e 20%, #ff4e00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1089e', endColorstr='#ff4e00',GradientType=1 );
+  }
+.tab-selector-wrapper{
+    position: absolute;
+    right: 50%;
+    width: 474px;
+    transform: translateX(50%);
+    top: 40px;
+}
+
+@media(max-width: 680px){
+    .tab-selector-wrapper{
+        width: 100%;
+    }
+}
+
+.tab-wrapper{
+    position: absolute;
+    top: 380px;
+}
+.tab-content-header{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: capitalize;
+    /* or 133% */
+    color: #3F071C;
+}
+
+.tab-content-body{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    /* or 200% */
+    color: #6B6165;
+}
+
+.tab-content-counter{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    /* or 200% */
+
+    text-align: center;
+
+    color: #6B6165;
+}
+.question-btn{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 50px;
+}

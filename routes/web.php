@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Routing\Console\MiddlewareMakeCommand;
+
 Route::get('/', 'PagesController@home')->name('fam');
 Route::get('/about-female-and-more', 'PagesController@aboutFam')->name('about');
 Route::get('/how-to-participate', 'PagesController@howToParticipate')->name('how-to-participate');
@@ -18,6 +20,7 @@ Route::get('/how-to-start-a-chapter', 'PagesController@howToStartAChapter')->nam
 Route::get('/causes', 'PagesController@causes')->name('causes');
 Route::get('/learders-board', 'PagesController@leardersBoard')->name('learders-board');
 Route::get('/gallary', 'PagesController@gallary')->name('gallary');
+Route::get('/story-detail', 'PagesController@storyDetail')->name('story.detail');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/register', 'SessionController@showRegistrationForm')->name('admin.register');
@@ -43,8 +46,13 @@ Route::get('/stories', function(){
 Auth::routes(['verify' => true]);
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register')->middleware('affiliate.tracking');
 Route::get('logout', 'Auth\LoginController@logout');
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
-Route::get('/dashboard', 'HomeController@dashboard')->name('user.dashboard')->middleware('verified');
+
+Route::group(['middleware' => 'verified'], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/dashboard', 'DashboardController@dashboard')->name('user.dashboard');
+    Route::post('/dashboard/profile-update/{id}', 'DashboardController@profileUpdate')->name('user.update');
+});
+
 
 Route::get('/admin/dashboard', function () {
     return view('admin.pages.home');

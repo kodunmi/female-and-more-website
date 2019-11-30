@@ -85,7 +85,7 @@ class RegisterController extends Controller
     public function showRegistrationForm(Request $request)
     {
         $this->storeReforrerId($request);
-       
+
         return view('auth.register');
     }
 
@@ -101,13 +101,14 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'username' => ['required', 'alpha_num', 'max:10','unique:users'],
             'country' => ['required', 'string', 'max:255'],
+            'dob' => 'required',
             'state' => ['required', 'string', 'max:255'],
             'goal-to-greatness' => ['required', 'string', 'max:80'],
             'image' => ['mimes:jpeg,png,jpg', 'required', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ],[
-            
+
             'image.uploaded' => 'fail to upload your image,  image maximum size is 80kb',
             'username.alpha_num' => 'the user name can only contain alphabet and numbers no space allowed'
         ]);
@@ -126,7 +127,7 @@ class RegisterController extends Controller
         $this->updateTotalScore();
 
         $uploadedFile = $data['image'];
-        $fileName =  Hash::make($data['email']).'.'.$uploadedFile->getClientOriginalExtension();
+        $fileName =  $data['username'].'.'.$uploadedFile->getClientOriginalExtension();
         $uploadedFile->storePubliclyAs('public/users',$fileName);
 
         return User::create([
@@ -134,9 +135,10 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'country' => $data['country'],
+            'dob' => $data['dob'],
             'state' => $data['state'],
             'goal_to_greatness' => $data['goal-to-greatness'],
-            'image' => 'storage/users/'.$fileName,
+            'image' => $fileName,
             'password' => Hash::make($data['password']),
         ]);
     }

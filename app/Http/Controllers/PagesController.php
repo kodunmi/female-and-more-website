@@ -36,11 +36,16 @@ class PagesController extends Controller
     {
         $users = User::orderBy('total_score', 'desc')->get();
         // dd($users);
-        return view('frontend.pages.leardersBoard')->with([ 'users' => $users]);
+        return view('frontend.pages.leardersBoard')->with(['users' => $users]);
     }
 
     public function gallary()
     {
         return view('frontend.pages.gallary');
     }
+
+    public function storyDetail()
+    {
+        return view('frontend.pages.story-detail');
+     }
 }

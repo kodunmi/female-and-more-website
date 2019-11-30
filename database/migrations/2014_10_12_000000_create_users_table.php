@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('image');
             $table->text('goal_to_greatness');
             $table->string('email')->unique();
+            $table->string('dob');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('referral_score')->default('0');

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('js')
-$("#commentForm").validate();
+$("#reg-form").validate();
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -19,7 +19,7 @@ function readURL(input) {
     <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card">
+            <div class="card mt50">
                 <div class="card-header gradient-bg all-text-white register-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -115,7 +115,7 @@ function readURL(input) {
 
                             <div class="col-md-6">
                                 <input id="dob" type="date" data-provide="datepicker" data-date-format="mm/dd/yyyy" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required autocomplete="date of birth" placeholder="choose date of birth mm/dd/yyyy">
-    
+
                                 @error('dob')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -128,7 +128,7 @@ function readURL(input) {
                             <label for="goalTogreatness" class="col-md-4 col-form-label text-md-right">{{ __('Goal To Greatness') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="goalTogreatness" maxlength="80" class="form-control @error('goal-to-greatness') is-invalid @enderror" name="goal-to-greatness" value="{{ old('state') }}" required autocomplete="goal-to-greatness" placeholder="write your goal to greatness" rows="5"></textarea>
+                                <textarea id="goalTogreatness" maxlength="80" class="form-control @error('goal-to-greatness') is-invalid @enderror" name="goal-to-greatness" required autocomplete="goal-to-greatness" placeholder="write your goal to greatness" rows="5">{{ old('state') }}</textarea>
 
                                 @error('goal-to-greatness')
                                     <span class="invalid-feedback" role="alert">

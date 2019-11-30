@@ -5,8 +5,8 @@
     <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
-            <div class="card">
-                <div class="card-header register-header pdb30">{{ __('Reset Password') }}</div>
+            <div class="card mt50">
+                <div class="card-header register-header gradient-bg ">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))

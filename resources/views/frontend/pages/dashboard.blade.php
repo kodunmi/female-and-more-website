@@ -1,28 +1,4 @@
 @extends('frontend.layouts.master')
-@section('js')
-function myFunction() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  var snackbar  = new SnackBar;
-    snackbar.make("message",
-  [
-    "Your Link As Been Copied",
-    null,
-    "bottom",
-    "center"
-  ], 4000);
-}
-
-@endsection
 @section('content')
 <snackbar></snackbar>
 <div class="main-content">
@@ -37,7 +13,7 @@ function myFunction() {
                 <div class="image_outer_container">
                     <div class="green_icon"></div>
                     <div class="image_inner_container">
-                        <img src="{{ asset(auth()->user()->image) }}">
+                        <img src="{{ asset('storage/users/'.auth()->user()->image) }}">
                     </div>
                 </div>
             </div>
@@ -98,14 +74,14 @@ function myFunction() {
                     </button>
                 </div>
                 <div class="modal-body mx-3 justify-content-center">
-                    <form  method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                    <form id="reg-form" method="POST" enctype="multipart/form-data">
                         @csrf
-
+                        <input type="hidden" id="id" value="{{ auth()->id() }}">
                         <div class="form-file">
-                            <input type="file" class="inputfile" name="image" id="your_picture" required  onchange="readURL(this);" data-multiple-caption="{count} files selected" multiple />
-                            <label for="your_picture">
+                            <input type="file" class="inputfile" name="image" id="image"  onchange="readURL(this);" data-multiple-caption="{count} files selected" multiple />
+                            <label for="image">
                                 <figure>
-                                    <img src="{{ asset('images/your-picture.png') }}" alt="" class="your_picture_image">
+                                    <img src="{{ asset('storage/users/'.auth()->user()->image) }}" alt="" class="your_picture_image">
                                 </figure>
                                 <span class="file-button">choose picture</span>
                                 @error('image')
@@ -120,7 +96,7 @@ function myFunction() {
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ auth()->user()->name }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -129,40 +105,11 @@ function myFunction() {
                                 @enderror
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('User Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" placeholder="your username should be one"utofocus>
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
                         <div class="form-group row">
                             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
                             <div class="col-md-6">
-                                <input id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country">
+                                <input id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ auth()->user()->country }}" required autocomplete="country">
 
                                 @error('country')
                                     <span class="invalid-feedback" role="alert">
@@ -175,7 +122,7 @@ function myFunction() {
                             <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('State') }}</label>
 
                             <div class="col-md-6">
-                                <input id="state" type="text" class="form-control @error('state') is-invalid @enderror" name="state" value="{{ old('state') }}" required autocomplete="country">
+                                <input id="state" type="text" class="form-control @error('state') is-invalid @enderror" name="state" value="{{ auth()->user()->state }}" required autocomplete="country">
 
                                 @error('state')
                                     <span class="invalid-feedback" role="alert">
@@ -189,7 +136,7 @@ function myFunction() {
                             <label for="dob" class="col-md-4 col-form-label text-md-right">{{ __('Date Of Birth') }}</label>
 
                             <div class="col-md-6">
-                                <input id="dob" type="date" data-provide="datepicker" data-date-format="mm/dd/yyyy" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required autocomplete="date of birth" placeholder="choose date of birth mm/dd/yyyy">
+                                <input id="dob" type="date" data-provide="datepicker" data-date-format="mm/dd/yyyy" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ auth()->user()->dob }}" required autocomplete="date of birth" placeholder="choose date of birth mm/dd/yyyy">
 
                                 @error('dob')
                                     <span class="invalid-feedback" role="alert">
@@ -203,7 +150,7 @@ function myFunction() {
                             <label for="goalTogreatness" class="col-md-4 col-form-label text-md-right">{{ __('Goal To Greatness') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="goalTogreatness" maxlength="80" class="form-control @error('goal-to-greatness') is-invalid @enderror" name="goal-to-greatness" value="{{ old('state') }}" required autocomplete="goal-to-greatness" placeholder="write your goal to greatness" rows="5"></textarea>
+                                <textarea id="goalTogreatness" maxlength="80" class="form-control @error('goal-to-greatness') is-invalid @enderror" name="goal_to_greatness"  required autocomplete="goal-to-greatness" placeholder="write your goal to greatness" rows="5">{{ auth()->user()->goal_to_greatness }}</textarea>
 
                                 @error('goal-to-greatness')
                                     <span class="invalid-feedback" role="alert">
@@ -212,15 +159,111 @@ function myFunction() {
                                 @enderror
                             </div>
                         </div>
-                    </form>
+
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-default">Update</button><button class="btn btn-default"  data-dismiss="modal" aria-label="Close">Close</button>
-                </div>
+                    <button type="submit" id="update-profile" class="btn btn-default">Update</button><button class="btn btn-default"  data-dismiss="modal" aria-label="Close">Close</button>
+                </div></form>
             </div>
         </div>
     </div>
 
 </div>
 </div>
+@endsection
+@section('js')
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  var snackbar  = new SnackBar;
+    snackbar.make("message",
+  [
+    "Your Link As Been Copied",
+    null,
+    "bottom",
+    "center"
+  ], 4000);
+};
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('.your_picture_image')
+                .attr('src', e.target.result);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+};
+
+$('#reg-form').on('submit', function(e){
+    e.preventDefault();
+
+    var id = $("#id").val();
+    console.log(id);
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        method:'POST',
+        url:'/dashboard/profile-update/'+id,
+        data: new FormData(this),
+        dataType:'JSON',
+        contentType: false,
+        cache: false,
+        processData: false,
+       success:function(data){
+           //location.reload();
+        var snackbar  = new SnackBar;
+        snackbar.make("message",
+      [
+        "Profile uploaded successfully | Reload Page",
+        null,
+        "bottom",
+        "center"
+      ], 8000);
+       },
+       error: function(error){
+           if(error.status == 422){
+            var snackbar  = new SnackBar;
+            snackbar.make("message",
+          [
+            "Your image must not be more than 50kb",
+            null,
+            "bottom",
+            "center"
+          ], 8000);
+           }else{
+            var snackbar  = new SnackBar;
+            snackbar.make("message",
+          [
+            "something went wrong please refresh",
+            null,
+            "bottom",
+            "center"
+          ], 8000);
+           }
+
+        }
+    });
+
+});
+
+
+
 @endsection
