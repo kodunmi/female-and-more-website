@@ -21,7 +21,7 @@ $factory->define(User::class, function (Faker $faker) {
         'username' => $faker->firstNameMale,
         'country' => $faker->country,
         'state' => $faker->state,
-        'image' => $faker->imageUrl($width = 100, $height = 100),
+        'image' => 'lekan.jpg',
         'goal_to_greatness' => $faker->realText($maxNbChars = 100 , $indexSize = 5),
         'referral_score' => $faker->numberBetween($min = 10, $max = 100),
         'story_score' => $faker->numberBetween($min = 10, $max = 100),

@@ -59,6 +59,32 @@
                     </div>
 
                 </section>
+                <section>
+                        <div class="profile-details text-center mt40">
+                                <div class="col-md-4 col-sm-6 mb10">
+                                    <div class="profile-card " style="padding-top: 15px; padding-bottom: 15px;">
+                                        <i class="fa fa-globe profile-details-font" aria-hidden="true"></i>
+                                        <p>Country</p>
+                                        <h3 style="margin-left: 20px;">{{ auth()->user()->country }}</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 mb10">
+                                    <div class="profile-card" style="padding-top: 15px; padding-bottom: 15px;">
+                                        <i class="fa fa-map-marker profile-details-font" aria-hidden="true"></i>
+                                        <p>State</p>
+                                        <h3 style="margin-left: 20px;">{{ auth()->user()->state }}</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6  mb10">
+                                    <div class="profile-card " style="padding-top: 15px; padding-bottom: 15px;">
+                                        <i class="fa fa-calendar-times-o profile-details-font" aria-hidden="true"></i>
+                                        <p>Date Of Birth</p>
+                                        <h3 style="margin-left: 20px;">{{ auth()->user()->dob }}</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                </section>
 
             </div>
         </div>

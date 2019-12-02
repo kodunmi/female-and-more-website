@@ -7,38 +7,40 @@
                 <nav id="easy-menu">
                     <ul class="menu-list">
                         <li><a href="{{ route('fam') }}" data-turbolinks-action="replace">Home</a></li>
-                        <li><a href="events.html">Events <i class="fa fa-angle-down"></i></a>
+                        <li><a href="{{ route('about') }}">About <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="event-details.html">Event Details</a></li>
+                                <li><a href="{{ route('about') }}">About FAM</a></li>
+                                <li><a href="{{ route('how-to-participate') }}">How To Participate</a></li>
+                                <li><a href="{{ route('how-to-start-a-chapter') }}">Start A Chapter</a></li>
+                                <li><a href="">About The Dev</a></li>
                             </ul>
                         </li>
-                        <li><a href="causes.html">Causes <i class="fa fa-angle-down"></i></a>
+                        <li><a href="{{ route('users') }}">Participants <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
-                                <li><a href="{{ route('stories') }}" data-turbolinks-action="replace">Stories</a></li>
-                                <li><a href="causes-details.html">Causes Details</a></li>
+                                <li><a href="{{ route('users') }}">All Participants</a></li>
+                                <li><a href="{{ route('learders-board') }}">Learders Board</a></li>
                             </ul>
                         </li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="{{ route('stories') }}">Stories</a></li>
                         <li><a href="contact-us.html">Contact</a></li>
-                        
+
                         @if (Auth::check())
                         <li><a href="blog.html">My Account <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
                                 <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
                                 <li><a href="{{ route('logout') }}">Logout</a></li>
                             </ul>
-                        </li> 
+                        </li>
                         @else
-                            <li><a href="blog.html">Account <i class="fa fa-angle-down"></i></a>
+                            <li><a href="{{ route('login') }}">Account <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown">
                                     <li><a href="{{ route('login') }}">Login</a></li>
                                     <li><a href="{{ route('register') }}">Register</a></li>
                                 </ul>
-                            </li> 
+                            </li>
                         @endif
-                        
-                        
+
+
                    </ul>
                </nav><!--#easy-menu-->
                <div class="donate-button-wrap">

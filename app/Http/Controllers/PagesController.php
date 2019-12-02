@@ -48,4 +48,15 @@ class PagesController extends Controller
     {
         return view('frontend.pages.story-detail');
      }
+
+     public function profile($username){
+        $user = User::where('username', $username)->first();
+
+        return view('frontend.pages.profile')->with(['user' => $user]);
+     }
+
+     public function users(){
+         $users = User::paginate(51);
+         return view('frontend.pages.users')->with(['users' => $users]);
+     }
 }

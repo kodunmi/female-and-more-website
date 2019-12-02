@@ -21,17 +21,28 @@ Route::get('/causes', 'PagesController@causes')->name('causes');
 Route::get('/learders-board', 'PagesController@leardersBoard')->name('learders-board');
 Route::get('/gallary', 'PagesController@gallary')->name('gallary');
 Route::get('/story-detail', 'PagesController@storyDetail')->name('story.detail');
+Route::get('/users/{username}', 'PagesController@profile')->name('profile');
+Route::get('/users', 'PagesController@users')->name('users');
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/register', 'SessionController@showRegistrationForm')->name('admin.register');
     Route::post('/register', 'SessionController@register')->name('admin.register.submit');
     Route::get('/login', 'SessionController@showLoginForm')->name('admin.login');
     Route::post('/login', 'SessionController@login')->name('admin.login.submit');
-    Route::get('/logout','SessionController@logout')->name('admin.logout');
-    Route::get('/profile','AdminController@profile')->name('admin.profile');
-    Route::post('/profile/update/{id}','AdminController@profileUpdate')->name('admin.profile.update');
-
 });
+Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
+    Route::get('/logout','SessionController@logout')->name('admin.logout');
+    // Route::get('/profile','AdminController@profile')->name('admin.profile');
+    // Route::post('/profile/update/{id}','AdminController@profileUpdate')->name('admin.profile.update');
+});
+
+Route::group(['middleware' => ['admin'],'prefix' => 'admin'], function () {
+    Route::resource('level', 'LevelController');
+    Route::resource('story', 'StoryController');
+});
+
+
+
 Route::get('/test', function() {
     return view('admin.pages.home');
 });

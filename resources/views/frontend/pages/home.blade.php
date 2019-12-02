@@ -224,7 +224,7 @@
      <div class="row">
          <div class="col-md-12">
              <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">HOW CAN YOU HELP <span class="base-color">US</span> </h2>
+                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">THIS IS FEMALE <span class="base-color">AND</span> MORE </h2>
                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
              </div>
@@ -237,9 +237,9 @@
                      <i class="help-us__icon fa fa-users"></i>
                  </div>
                  <div class="help-us__text-content">
-                     <h4 class="help-us__title heading-label-four">BECOME VOLUNTEER</h4>
+                     <h4 class="help-us__title heading-label-four">VIEW ALL PARTICIPANTS</h4>
                      <p>Lorem ipsum dolor sit amet, risus adipisci elit. Praesent laoreet condimentum</p>
-                     <a href="#" class="btn">Read More</a>
+                     <a href="#" class="btn">Go To Page</a>
                  </div>
              </div>
          </div>
@@ -249,7 +249,7 @@
                      <i class="help-us__icon fa fa-money"></i>
                  </div>
                  <div class="help-us__text-content">
-                     <h4 class="help-us__title heading-label-four">BECOME DONATOR</h4>
+                     <h4 class="help-us__title heading-label-four">VIEW LEADERS BOARD</h4>
                      <p>Lorem ipsum dolor sit amet, risus adipisci elit. Praesent laoreet condimentum</p>
                      <a href="#" class="btn">Read More</a>
                  </div>
@@ -261,7 +261,7 @@
                      <i class="help-us__icon fa fa-child"></i>
                  </div>
                  <div class="help-us__text-content">
-                     <h4 class="help-us__title heading-label-four">ADOPT A CHILD</h4>
+                     <h4 class="help-us__title heading-label-four">BECOME A VOLUNTEER</h4>
                      <p>Lorem ipsum dolor sit amet, risus adipisci elit. Praesent laoreet condimentum</p>
                      <a href="#" class="btn">Read More</a>
                  </div>
@@ -291,7 +291,7 @@
                                 <span>Story One</span>
                             </div>
                             <img data-src="images/stories/oke.jpg" class="our-causes__image lazy" alt="">
-                            
+
                             <div class="loader"></div>
                             <div class="our-causes__percentage base-bg">
                                 <div class="our-causes__rised">
@@ -323,7 +323,7 @@
                                 <span>Story Two</span>
                             </div>
                             <img data-src="images/stories/amina.jpg" class="our-causes__image lazy" alt="">
-                            
+
                             <div class="loader"></div>
                             <div class="our-causes__percentage base-bg">
                                 <div class="our-causes__rised">
@@ -355,7 +355,7 @@
                                 <span>Story Three</span>
                             </div>
                             <img data-src="images/stories/stella.jpg" class="our-causes__image lazy" alt="">
-                            
+
                             <div class="loader"></div>
                             <div class="our-causes__percentage base-bg">
                                 <div class="our-causes__rised">
@@ -469,7 +469,7 @@
                      <div class="fund-testimonial__author">
                          <div class="fund-testimonial__author-image pr">
                              <img src="images/home/testimonial-2.jpg" alt="">
-                             
+
                          </div>
                          <div class="fund-testimonial__author-text">
                              <h4 class="fund-testimonial__author-name">TONI MARSAL</h4>
@@ -532,5 +532,5 @@
             </div>
         </div>
     </div>
-</section> 
+</section>
 @endsection
