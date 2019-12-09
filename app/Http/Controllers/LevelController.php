@@ -14,7 +14,8 @@ class LevelController extends Controller
      */
     public function index()
     {
-        //
+        $levels = Level::all();
+        return view('admin.pages.view-levels',['levels' => $levels]);
     }
 
     /**
@@ -24,7 +25,7 @@ class LevelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.add-level');
     }
 
     /**
@@ -35,7 +36,22 @@ class LevelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+        'level_name' => 'required',
+        'level_description' => 'required',
+        'level_number' => ['required','numeric','unique:levels,level_number']
+        ]);
+
+        $level = new Level;
+        $level->level_name = $request->level_name;
+        $level->level_description = $request->level_description;
+        $level->level_number = $request->level_number;
+        $level->save();
+
+        return back()->with([
+            'message' => 'level created successfully',
+            'alert-type' => 'success'
+        ]);
     }
 
     /**
@@ -69,7 +85,11 @@ class LevelController extends Controller
      */
     public function update(Request $request, Level $level)
     {
-        //
+        $level->level_name = $request->level_name;
+        $level->level_description = $request->level_description;
+        $level->save();
+
+        return back()->with(['message' => 'level updated successfully', 'alert-type' => 'success']);
     }
 
     /**

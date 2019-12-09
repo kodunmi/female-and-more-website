@@ -8,6 +8,6 @@ class Story extends Model
 {
     public function level()
     {
-        return $this->belongsTo('App\Level');
+        return $this->belongsTo(Level::class);
     }
 }

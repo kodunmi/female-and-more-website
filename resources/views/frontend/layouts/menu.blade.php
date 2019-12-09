@@ -18,10 +18,18 @@
                         <li><a href="{{ route('users') }}">Participants <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown">
                                 <li><a href="{{ route('users') }}">All Participants</a></li>
-                                <li><a href="{{ route('learders-board') }}">Learders Board</a></li>
+                                @auth
+                                    @hasStartedLevel
+                                    <li><a href="{{ route('learders-board') }}">Learders Board</a></li>
+                                    @endhasStartedLevel
+                                @endauth
                             </ul>
                         </li>
-                        <li><a href="{{ route('stories') }}">Stories</a></li>
+                        @auth
+                        @hasStartedLevel
+                        <li><a href="{{ route('stories',['id' => auth()->user()->level_number]) }}">Stories</a></li>
+                        @endhasStartedLevel
+                        @endauth
                         <li><a href="contact-us.html">Contact</a></li>
 
                         @if (Auth::check())

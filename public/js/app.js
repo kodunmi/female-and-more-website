@@ -1854,6 +1854,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2374,20 +2391,57 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
+    return _c("div", { staticClass: "our-causes" }, [
+      _c("div", { staticClass: "our-causes__image-wrap pr" }, [
+        _c("div", { staticClass: "day_no" }, [
+          _c("span", [_vm._v("Story Two")])
+        ]),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "our-causes__image lazy",
+          attrs: { "data-src": "images/stories/amina.jpg", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "loader" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "our-causes__percentage base-bg" }, [
+          _c("div", { staticClass: "our-causes__rised" }, [
+            _vm._v("\n                                        WEEK    "),
+            _c("span", { staticClass: "base-color" }, [_vm._v(" ONE ")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "our-causes__goal" }, [
+            _c("span", { staticClass: "nv-color" }, [_vm._v("DAY   ")]),
             _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
+            _c("span", [_vm._v(" TWO ")])
           ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "our-causes__text-content text-center" }, [
+        _c("div", { staticClass: "progress-item" }, [
+          _c("div", { staticClass: "progress-bg" }, [
+            _c("div", {
+              staticClass: "progress-rate base-bg",
+              attrs: { id: "progress-two", "data-value": "80" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "progress-percent" }, [_vm._v("80%")])
+        ]),
+        _vm._v(" "),
+        _c("h4", { staticClass: "text-uppercase our-causes__title" }, [
+          _c("a", { attrs: { href: "#" } }, [_vm._v("amina slaoui")])
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          )
+        ]),
+        _vm._v(" "),
+        _c("a", { staticClass: "btn", attrs: { href: "#" } }, [
+          _vm._v("Read Story")
         ])
       ])
     ])

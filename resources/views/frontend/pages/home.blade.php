@@ -27,7 +27,7 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
-                ><span class="slider-title">Every Children Has <br/>Equal Right</span></div>
+                ><span class="slider-title">Become the best woman <br/>You&apos;re meant to be</span></div>
             <!-- LAYER NR. 2 -->
             <div class="tp-caption tp-resizeme slider-sub-heading-wrap"
                 id="slide-2946-layer-10"
@@ -48,7 +48,7 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]">
-                <span class="slider-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  <br/>tempor incididunt ut labore et dolore magna aliqua. </span></div>
+                <span class="slider-sub-heading">Go through series of powerful daily story reading<br/>about great African women who has sailed the sea before you</span></div>
             <!-- LAYER NR. 3 -->
 
             <!-- LAYER NR. 4 -->
@@ -71,7 +71,7 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]" >
-                    <a href="#" class="btn">Donet Now</a>
+                    <a href="{{ route('register') }}" class="btn">Sign Up Now</a>
             </div>
         </li>
         <li data-index="rs-2947" data-transition="fade" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" >
@@ -97,7 +97,7 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
-                ><span class="slider-title">Every Children Has <br/>Equal Right</span></div>
+                ><span class="slider-title">You&apos;re meant for more<br/>You&apos;re the future</span></div>
             <!-- LAYER NR. 2 -->
             <div class="tp-caption tp-resizeme slider-sub-heading-wrap"
                 id="slide-2947-layer-10"
@@ -118,7 +118,7 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]">
-                <span class="slider-sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  <br/>tempor incididunt ut labore et dolore magna aliqua. </span></div>
+                <span class="slider-sub-heading">Sign up for female and more to discover your inner queen and energy<br/>Female and more!!! you&apos;re more </span></div>
             <!-- LAYER NR. 3 -->
 
             <!-- LAYER NR. 4 -->
@@ -141,7 +141,7 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]" >
-                    <a href="#" class="btn">Donet Now</a>
+                    <a href="{{ route('register') }}" class="btn">Sign Up Now</a>
             </div>
         </li>
 
@@ -155,7 +155,7 @@
      <div class="row">
          <div class="col-md-12">
              <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Our <span class="base-color">CAUSES</span> </h2>
+                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Stroll  <span class="base-color">Through</span> FAM </h2>
                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
              </div>

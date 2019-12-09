@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- Mirrored from iglyphic.com/themes/html/thefund/lazyload/causes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Nov 2019 14:34:31 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -37,11 +38,13 @@
     <!-- Modernizr-->
     <script src="/frontend/js/modernizr-2.8.3.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- date picker -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" data-turbolinks-track="true" data-turbolinks-eval="false"/>
-    <script src="/frontend/js/turbolinks.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" data-turbolinks-track="true" data-turbolinks-eval="false" />
+    <!-- <script src="/frontend/js/turbolinks.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js"></script>
 </head>
+
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -54,11 +57,9 @@
         </div>
     </div>
     <!--/.preloader-->
-    @include('frontend.layouts.header')
-    @include('frontend.layouts.mobile-nav')
-    @include('frontend.layouts.menu')
+    @include('frontend.layouts.header') @include('frontend.layouts.mobile-nav') @include('frontend.layouts.menu')
     <div id="app">
-         @yield('content')
+        @yield('content')
     </div>
     @include('frontend.layouts.footer')
     <!-- // End Footer  -->
@@ -98,10 +99,11 @@
     <script>
         @yield('js')
     </script>
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
 
     <!-- <script src="/js/app.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script> -->
-    </body>
+</body>
 
 <!-- Mirrored from iglyphic.com/themes/html/thefund/lazyload/causes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 Nov 2019 14:34:31 GMT -->
+
 </html>

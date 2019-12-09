@@ -46,20 +46,48 @@
                             </span>
                         </div>
                     </div>
+                    @hasStartedLevel
                     <div class="buy-ticket all-text-white hidden-sm hidden-xs">
                             <a href="{{ route('learders-board') }}" class="btn base-bg">Leader Board</a>
                             <div class="pdt15">check all score</div>
                     </div>
-                </div>
-                <section>
-                    <h3 class="text-center base-color">Copy Your Referral Link</h3>
-                    <div class="newsletter-form">
-                        <input id="myInput" value="{{ auth()->user()->getAffiliateLink($url) }}" readonly="readonly" class="form-control newsletter-form__input" />
-                        <button  class="btn base-bg newsletter-form__submit"  onclick="myFunction()" >COPY</button>
+                    @else
+                    <div class="buy-ticket all-text-white hidden-sm hidden-xs">
+                            <a disabled class="btn base-bg">Leader Board</a>
+                            <div class="pdt15">check all score</div>
                     </div>
 
-                </section>
+                    @endhasStartedLevel
+
+                </div>
+                @hasStartedLevel
+                    <section>
+                        <h3 class="text-center base-color">Copy Your Referral Link</h3>
+                        <div class="newsletter-form">
+                            <input id="myInput" value="{{ auth()->user()->getAffiliateLink($url) }}" readonly="readonly" class="form-control newsletter-form__input" />
+                            <button  class="btn base-bg newsletter-form__submit"  onclick="myFunction()" >COPY</button>
+                        </div>
+                    </section>
+                @else
                 <section>
+                    <div class="alert alert-success alert-dismissible show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="alert-heading text-center">Hey {{ auth()->user()->name }}</h4>
+                      <h3 class="text-center mb40">No programme is running for your level ({{ auth()->user()->level_number }}) yet</h3>
+                      <p class="text-center mb40">level {{auth()->user()->level_number }} will start soon</p>
+                    </div>
+                    {{-- <div class="alert alert-success mb40 " role="alert">
+                      <h4 class="alert-heading text-center">Hey {{ auth()->user()->name }}</h4>
+                      div.alert-b
+                      <h3 class="text-center mb40">No programme is running for your level ({{ auth()->user()->level_number }}) yet</h3>
+                      <p class="text-center mb40">level {{auth()->user()->level_number }} will start soon</p>
+                    </div> --}}
+                </section>
+                @endhasStartedLevel
+                <section >
                         <div class="profile-details text-center mt40">
                                 <div class="col-md-4 col-sm-6 mb10">
                                     <div class="profile-card " style="padding-top: 15px; padding-bottom: 15px;">

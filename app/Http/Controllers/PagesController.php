@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\User;
+use App\Story;
+use App\Level;
 
 class PagesController extends Controller
 {
@@ -35,6 +37,8 @@ class PagesController extends Controller
     public function leardersBoard()
     {
         $users = User::orderBy('total_score', 'desc')->get();
+
+        //return response()->json( $users);
         // dd($users);
         return view('frontend.pages.leardersBoard')->with(['users' => $users]);
     }
@@ -58,5 +62,27 @@ class PagesController extends Controller
      public function users(){
          $users = User::paginate(51);
          return view('frontend.pages.users')->with(['users' => $users]);
+     }
+
+     public function stories($id){
+
+        $level = Level::where('level_number',$id)->first();
+        $upcomingStories = $level->upcomingStories;
+        $stories = $level->stories;
+        $currentStory= $level->currentStory;
+        $completedStories = $level->completedStories;
+        $levelUser = $level->participants;
+
+        // return response()->json([
+        //     'stories' => $stories,
+        //     'currentStory' => $currentStory,
+        //     'completedStories' => $completedStories,
+        //     'upcomingStories'   => $upcomingStories,
+        //     'levelUser'   => $levelUser
+
+        // ]);
+
+
+        return view('frontend.pages.stories',['level' => $level]);
      }
 }

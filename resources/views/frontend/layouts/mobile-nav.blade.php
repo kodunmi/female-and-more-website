@@ -35,7 +35,7 @@
             <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
             <li><a href="{{ route('logout') }}">Logout</a></li>
              @endauth
-            <li><a href="{{ route('fam') }}">Home</a></li>
+             <li><a href="{{ route('fam') }}">Home</a></li>
             <li><a href="events.html" class="has-submenu">Events<i class="fa fa-angle-down"></i></a>
                 <ul class="dropdown">
                     <li><a href="events.html">Events</a></li>

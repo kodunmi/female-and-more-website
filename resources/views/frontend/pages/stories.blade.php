@@ -6,7 +6,9 @@
         <div class="profile-header gradient-bg">
             <img class="profile-header-image" src="{{ asset('images/logo.png') }}" alt="">
             <div class="profile-gtg">
-                <em>All Wonderful Females On The Platform</em>
+
+                <h3>{{ $level->level_name }}</h3>
+                <em>{{ $level->level_description }}</em>
             </div>
         </div>
         <div class="profile-body">
@@ -26,21 +28,26 @@
                             <div class="tab-content-header">
                                 <p>Story Of The Day</p>
                             </div>
+                            @if ($level->currentStory->count() > 0)
+                            @foreach ($level->currentStory as $currentStory)
                             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                                 <div class="our-causes">
                                     <div class="our-causes__image-wrap pr">
                                         <div class="day_no">
-                                            <span>Story One</span>
+                                            <span>Story {{ $currentStory->story_number }}</span>
                                         </div>
-                                        <img data-src="{{ asset('images/story.png') }}" class="our-causes__image lazy" alt="">
+                                        <img data-src="{{ asset('images/story.png') }}" class="our-causes__image lazy"
+                                            alt="">
 
                                         <div class="loader"></div>
                                         <div class="our-causes__percentage base-bg">
                                             <div class="our-causes__rised">
-                                                WEEK &nbsp; <span class="base-color"> ONE </span>
+                                                WEEK &nbsp; <span class="base-color">
+                                                    {{ $currentStory->story_week_number }} </span>
                                             </div>
                                             <div class="our-causes__goal">
-                                                <span class="nv-color">DAY &nbsp; </span> <span> ONE </span>
+                                                <span class="nv-color">DAY &nbsp; </span> <span>
+                                                    {{ $currentStory->story_number }} </span>
                                             </div>
                                         </div>
                                     </div>
@@ -50,120 +57,73 @@
                                                 <div id='progress-one' class="progress-rate base-bg" data-value='80'>
                                                 </div>
                                             </div>
-                                            <span class="progress-percent">80%</span>
+                                            <span class="progress-percent">50%</span>
                                         </div>
                                         <!--/.progress-item-->
-                                        <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a>
+                                        <h4 class="text-uppercase our-causes__title"><a
+                                                href="#">{{ $currentStory->icon_name }}</a>
                                         </h4>
-                                        <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna aliqua</p>
+                                        <p>{{ Str::limit($currentStory->icon_quote, $limit = 60, $end = '...') }}</p>
                                         <a href="{{ route('story.detail') }}" class="btn">Read Story</a>
                                     </div>
                                 </div>
                                 <!--/.our-causes-->
                             </div>
+                            @endforeach
+                            @else
+                            <h1 class="mb30">No current Story</h1>
+                            @endif
+
                         </div>
                         <div class="tab-content previous-stories pdl15 pdr15 text-center">
                             <div class="tab-content-header">
                                 <p>Previous Stories</p>
                             </div>
                             <div class="row">
+                                @if ($level->completedStories->count() > 0)
+                                @foreach ($level->completedStories as $stories)
                                 <div class="col-sm-6 col-xs-12 col-md-4">
                                     <div class="our-causes">
                                         <div class="our-causes__image-wrap pr">
                                             <div class="day_no">
-                                                <span>Story One</span>
+                                                <span>Story {{ $stories->story_number }}</span>
                                             </div>
-                                            <img data-src="images/stories/oke.jpg" class="our-causes__image lazy" alt="">
-
+                                            <img data-src="{{ asset('images/story.png') }}" class="our-causes__image lazy"
+                                                alt="">
                                             <div class="loader"></div>
                                             <div class="our-causes__percentage base-bg">
                                                 <div class="our-causes__rised">
-                                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
+                                                    WEEK &nbsp; <span class="base-color">
+                                                        {{ $stories->story_week_number }} </span>
                                                 </div>
                                                 <div class="our-causes__goal">
-                                                    <span class="nv-color">DAY &nbsp; </span> <span> ONE </span>
+                                                    <span class="nv-color">DAY &nbsp; </span> <span>
+                                                        {{ $stories->story_number }} </span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="our-causes__text-content text-center">
                                             <div class="progress-item">
-                                                <div  class="progress-bg">
-                                                    <div id='progress-one' class="progress-rate base-bg" data-value='80'>
+                                                <div class="progress-bg">
+                                                    <div id='progress-one' class="progress-rate base-bg"
+                                                        data-value='80'>
                                                     </div>
                                                 </div>
-                                                <span class="progress-percent">80%</span>
-                                            </div><!--/.progress-item-->
-                                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                                <span class="progress-percent">100%</span>
+                                            </div>
+                                            <!--/.progress-item-->
+                                            <h4 class="text-uppercase our-causes__title"><a
+                                                    href="#">{{ $stories->icon_name }}</a></h4>
+                                            <p>{{ Str::limit($stories->icon_quote, $limit = 60, $end = '...') }}</p>
                                             <a href="#" class="btn">Read Story</a>
                                         </div>
-                                    </div><!--/.our-causes-->
+                                    </div>
+                                    <!--/.our-causes-->
                                 </div>
-                                <div class="col-sm-6 col-xs-12 col-md-4">
-                                    <div class="our-causes">
-                                        <div class="our-causes__image-wrap pr">
-                                            <div class="day_no">
-                                                <span>Story Two</span>
-                                            </div>
-                                            <img data-src="images/stories/amina.jpg" class="our-causes__image lazy" alt="">
-
-                                            <div class="loader"></div>
-                                            <div class="our-causes__percentage base-bg">
-                                                <div class="our-causes__rised">
-                                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                                </div>
-                                                <div class="our-causes__goal">
-                                                    <span class="nv-color">DAY &nbsp; </span> <span> TWO </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="our-causes__text-content text-center">
-                                            <div class="progress-item">
-                                                <div  class="progress-bg">
-                                                    <div id='progress-two' class="progress-rate base-bg" data-value='80'>
-                                                    </div>
-                                                </div>
-                                                <span class="progress-percent">80%</span>
-                                            </div><!--/.progress-item-->
-                                            <h4 class="text-uppercase our-causes__title"><a href="#">amina slaoui</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                                            <a href="#" class="btn">Read Story</a>
-                                        </div>
-                                    </div><!--/.our-causes-->
-                                </div>
-                                <div class="col-sm-6 col-xs-12 col-md-4">
-                                    <div class="our-causes">
-                                        <div class="our-causes__image-wrap pr">
-                                            <div class="day_no">
-                                                <span>Story Three</span>
-                                            </div>
-                                            <img data-src="images/stories/stella.jpg" class="our-causes__image lazy" alt="">
-
-                                            <div class="loader"></div>
-                                            <div class="our-causes__percentage base-bg">
-                                                <div class="our-causes__rised">
-                                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                                </div>
-                                                <div class="our-causes__goal">
-                                                    <span class="nv-color">DAY &nbsp; </span> <span> THREE </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="our-causes__text-content text-center">
-                                            <div class="progress-item">
-                                                <div  class="progress-bg">
-                                                    <div id='progress-three' class="progress-rate base-bg" data-value='80'>
-                                                    </div>
-                                                </div>
-                                                <span class="progress-percent">80%</span>
-                                            </div><!--/.progress-item-->
-                                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                                            <a href="#" class="btn">Read Story</a>
-                                        </div>
-                                    </div><!--/.our-causes-->
-                                </div>
+                                @endforeach
+                                @else
+                                <h1 class="mb30">No Previous Story</h1>
+                                @endif
                             </div>
                         </div>
                         <div class="tab-content up-coming-stories pdl15 pdr15 text-center">
@@ -171,102 +131,50 @@
                                 <p>Up Coming Stories</p>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 col-xs-12 col-md-4">
-                                    <div class="our-causes">
-                                        <div class="our-causes__image-wrap pr">
-                                            <div class="day_no">
-                                                <span>Story One</span>
-                                            </div>
-                                            <img data-src="images/stories/oke.jpg" class="our-causes__image lazy" alt="">
+                                @if ($level->upcomingStories->count() > 0)
+                                    @foreach ($level->upcomingStories as $upcomingStories)
+                                    <div class="col-sm-6 col-xs-12 col-md-4">
+                                            <div class="our-causes">
+                                                <div class="our-causes__image-wrap pr">
+                                                    <div class="day_no">
+                                                        <span>Story {{ $upcomingStories->story_number }}</span>
+                                                    </div>
+                                                    <img data-src="{{ asset('images/protection.png') }}" class="our-causes__image lazy"
+                                                        alt="">
 
-                                            <div class="loader"></div>
-                                            <div class="our-causes__percentage base-bg">
-                                                <div class="our-causes__rised">
-                                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                                </div>
-                                                <div class="our-causes__goal">
-                                                    <span class="nv-color">DAY &nbsp; </span> <span> ONE </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="our-causes__text-content text-center">
-                                            <div class="progress-item">
-                                                <div  class="progress-bg">
-                                                    <div id='progress-one' class="progress-rate base-bg" data-value='80'>
+                                                    <div class="loader"></div>
+                                                    <div class="our-causes__percentage base-bg">
+                                                        <div class="our-causes__rised">
+                                                            WEEK &nbsp; <span class="base-color"> {{ $upcomingStories->story_week_number }} </span>
+                                                        </div>
+                                                        <div class="our-causes__goal">
+                                                            <span class="nv-color">DAY &nbsp; </span> <span> {{ $upcomingStories->story_number }} </span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <span class="progress-percent">80%</span>
-                                            </div><!--/.progress-item-->
-                                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                                            <a href="#" class="btn">Read Story</a>
-                                        </div>
-                                    </div><!--/.our-causes-->
-                                </div>
-                                <div class="col-sm-6 col-xs-12 col-md-4">
-                                    <div class="our-causes">
-                                        <div class="our-causes__image-wrap pr">
-                                            <div class="day_no">
-                                                <span>Story Two</span>
-                                            </div>
-                                            <img data-src="images/stories/amina.jpg" class="our-causes__image lazy" alt="">
-
-                                            <div class="loader"></div>
-                                            <div class="our-causes__percentage base-bg">
-                                                <div class="our-causes__rised">
-                                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                                </div>
-                                                <div class="our-causes__goal">
-                                                    <span class="nv-color">DAY &nbsp; </span> <span> TWO </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="our-causes__text-content text-center">
-                                            <div class="progress-item">
-                                                <div  class="progress-bg">
-                                                    <div id='progress-two' class="progress-rate base-bg" data-value='80'>
+                                                <div class="our-causes__text-content text-center">
+                                                    <div class="progress-item">
+                                                        <div class="progress-bg">
+                                                            <div id='progress-one' class="progress-rate base-bg"
+                                                                data-value='80'>
+                                                            </div>
+                                                        </div>
+                                                        <span class="progress-percent">0%</span>
                                                     </div>
+                                                    <!--/.progress-item-->
+                                                    <h4 class="text-uppercase our-causes__title"><a href="#">xxxxxx xxxxxxxx</a>
+                                                    </h4>
+                                                    <p>{{ Str::limit($upcomingStories->icon_quote, $limit = 60, $end = '...') }}</p>
+                                                    <button class="btn" disabled>Read Story</button>
                                                 </div>
-                                                <span class="progress-percent">80%</span>
-                                            </div><!--/.progress-item-->
-                                            <h4 class="text-uppercase our-causes__title"><a href="#">amina slaoui</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                                            <a href="#" class="btn">Read Story</a>
-                                        </div>
-                                    </div><!--/.our-causes-->
-                                </div>
-                                <div class="col-sm-6 col-xs-12 col-md-4">
-                                    <div class="our-causes">
-                                        <div class="our-causes__image-wrap pr">
-                                            <div class="day_no">
-                                                <span>Story Three</span>
                                             </div>
-                                            <img data-src="images/stories/stella.jpg" class="our-causes__image lazy" alt="">
+                                            <!--/.our-causes-->
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <h1>No upcoming stories</h1>
+                                @endif
 
-                                            <div class="loader"></div>
-                                            <div class="our-causes__percentage base-bg">
-                                                <div class="our-causes__rised">
-                                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                                </div>
-                                                <div class="our-causes__goal">
-                                                    <span class="nv-color">DAY &nbsp; </span> <span> THREE </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="our-causes__text-content text-center">
-                                            <div class="progress-item">
-                                                <div  class="progress-bg">
-                                                    <div id='progress-three' class="progress-rate base-bg" data-value='80'>
-                                                    </div>
-                                                </div>
-                                                <span class="progress-percent">80%</span>
-                                            </div><!--/.progress-item-->
-                                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                                            <a href="#" class="btn">Read Story</a>
-                                        </div>
-                                    </div><!--/.our-causes-->
-                                </div>
                             </div>
                         </div>
                     </div>
