@@ -1,8 +1,11 @@
 <?php
+
+use App\Level;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\Console\MiddlewareMakeCommand;
 use App\Story;
 use App\User;
+use Illuminate\Support\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,18 +43,18 @@ Route::group(['prefix' => 'admin'], function () {
 Route::prefix('admin')->middleware('auth:admin')->group(function() {
     Route::get('/logout','SessionController@logout')->name('admin.logout');
     Route::get('/dashboard/all-users', function () {
-
         $users = User::all();
         return view('admin.pages.view-users',['users' => $users]);
     })->name('all-users');
+    Route::post('/start-level/{level}', 'LevelController@startLevel')->name('level.start');
     Route::resource('level', 'LevelController');
     Route::resource('story', 'StoryController');
 });
 
 
-Route::get('/test', function() {
-    return view('admin.pages.home');
-});
+// Route::get('/test', function() {
+//     return view('admin.pages.home');
+// });
 
 
 
@@ -74,43 +77,43 @@ Route::get('/admin/dashboard', function () {
     return view('admin.pages.home');
 })->name('admin.dashboard')->middleware('auth:admin');
 
-Route::get('/test', function () {
-    $story = Story::where('is_current','yes')->first();
+// Route::get('/test', function () {
+//     $story = Story::where('is_current','yes')->first();
 
-    if($story == null){
-        $first_story = Story::orderBy('story_number', 'asc')->first();
-        $first_story->is_current = 'yes';
-        $first_story->save();
-    }else{
-        $current_story = Story::where('is_current','yes')->first();
+//     if($story == null){
+//         $first_story = Story::orderBy('story_number', 'asc')->first();
+//         $first_story->is_current = 'yes';
+//         $first_story->save();
+//     }else{
+//         $current_story = Story::where('is_current','yes')->first();
 
-        $next_story = Story::where('id', '>' , $current_story->id)->orderBy('id', 'asc')->first();
+//         $next_story = Story::where('id', '>' , $current_story->id)->orderBy('id', 'asc')->first();
 
-        if($next_story != null){
-            $next_story->is_current = 'yes';
-            $next_story->save();
-        }
+//         if($next_story != null){
+//             $next_story->is_current = 'yes';
+//             $next_story->save();
+//         }
 
-        $current_story->is_current = 'no';
-        $current_story->is_completed = 'yes';
-        $current_story->save();
-    }
-
-
-        // $last_story = Story::where('is_completed','yes')->orderBy('story_number', 'desc')->value('story_number');
+//         $current_story->is_current = 'no';
+//         $current_story->is_completed = 'yes';
+//         $current_story->save();
+//     }
 
 
-    if(Story::orderBy('story_number', 'desc')->value('is_completed') == 'yes'){
-        $users = User::where('total_score', '>=' , 300)->get();
-            foreach($users as $user){
-                $user->level_number = 2;
-                $user->save();
-            }
-    }
+//         // $last_story = Story::where('is_completed','yes')->orderBy('story_number', 'desc')->value('story_number');
 
-//
 
-});
+//     if(Story::orderBy('story_number', 'desc')->value('is_completed') == 'yes'){
+//         $users = User::where('total_score', '>=' , 300)->get();
+//             foreach($users as $user){
+//                 $user->level_number = 2;
+//                 $user->save();
+//             }
+//     }
+
+// //
+
+// });
 
 Route::get('test/{id}', function ($id) {
     $story = Story::where('is_current','yes')->where('level_id',$id)->first();

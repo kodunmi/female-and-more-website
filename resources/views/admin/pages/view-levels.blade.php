@@ -20,6 +20,7 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
+                    @include('admin.layout.error')
                     @if (Session::has('message'))
                     <div class="alert alert-{{Session::get('alert-type')}}">{{Session::get('message')}}</div>
                     @endif
@@ -29,6 +30,7 @@
                                 <tr>
                                     <th>level Name</th>
                                     <th>level Number</th>
+                                    <th>level Starting Date</th>
                                     <th>level Description</th>
                                     <th>Start Level</th>
                                     <th>Edit</th>
@@ -40,13 +42,19 @@
                                 <tr>
                                     <td>{{$level->level_name}}</td>
                                     <td>{{$level->level_number}}</td>
+                                    <td>{{$level->starting_time}}</td>
                                     <td>{!!$level->level_description!!}</td>
-                                    <td> <i class="fa fa-play btn btn-info" aria-hidden="true" data-toggle="modal" data-target="#start{{$level->id}}"></i></td>
-                                    <td><i class="fa fa-pencil btn btn-primary" aria-hidden="true" data-toggle="modal" data-target="#edit{{$level->id}}"></i></td>
+                                    @hasStartedLevel($level->level_number)
+                                    <td> <i class="fa fa-stop btn btn-warning" aria-hidden="true"></i></td>
+                                    @else
+                                    <td> <i class="fa fa-play btn btn-info" aria-hidden="true" data-toggle="modal" data-target="#start{{$level->level_number}}"></i></td>
+                                    @endhasStartedLevel
+
+                                    <td><i class="fa fa-pencil btn btn-primary" aria-hidden="true" data-toggle="modal" data-target="#edit{{$level->level_number}}"></i></td>
                                     <td> <a href=""><i class="fa fa-trash btn btn-danger" aria-hidden="true"></i></a></td>
                                 </tr>
                                 <!--edit Modal -->
-                                <div class="modal fade" id="edit{{$level->id}}" tabindex="-1" role="dialog"
+                                <div class="modal fade" id="edit{{$level->level_number}}" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -90,18 +98,17 @@
                                     </div>
                                 </div>
                                 <!--start Modal -->
-                                <div class="modal fade" id="start{{$level->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal fade" id="start{{$level->level_number}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                       <div class="modal-content">
                                         <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                          <h5 class="modal-title" id="exampleModalLongTitle">{{ $level->level_name }}</h5>
                                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                           </button>
                                         </div>
-                                        <form action="{{ route('level.update',['level' => $level->id]) }}">
-                                                @csrf
-                                                @method('PATCH')
+                                        <form action="{{ route('level.start',['level' => $level->level_number]) }}" method="POST">
+                                        @csrf
                                         <div class="modal-body">
                                             <div class="form-group">
                                                 <label>Date To Start</label>
@@ -109,13 +116,13 @@
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
-                                                    <input type="date" class="form-control" name="level_name"
+                                                    <input type="date" class="form-control" name="starting_date"
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                          <button type="button" class="btn btn-primary">Save Start</button>
+                                          <button type="submit" class="btn btn-primary">Save Start</button>
                                         </div>
                                     </form>
                                       </div>
@@ -127,6 +134,7 @@
                                 <tr>
                                     <th>level name</th>
                                     <th>level number</th>
+                                    <th>level starting date</th>
                                     <th>level Description</th>
                                     <th>Edit</th>
                                     <th>Delete</th>

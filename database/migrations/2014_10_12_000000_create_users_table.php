@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('dob');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->tinyInteger('level_id')->default('1');
+            $table->tinyInteger('level_number')->default('1');
             $table->integer('referral_score')->default('0');
             $table->integer('story_score')->default('0');
             $table->integer('total_score')->default('0');

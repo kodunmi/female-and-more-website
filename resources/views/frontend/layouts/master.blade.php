@@ -57,7 +57,9 @@
         </div>
     </div>
     <!--/.preloader-->
-    @include('frontend.layouts.header') @include('frontend.layouts.mobile-nav') @include('frontend.layouts.menu')
+    @include('frontend.layouts.header')
+    @include('frontend.layouts.mobile-nav')
+    @include('frontend.layouts.menu')
     <div id="app">
         @yield('content')
     </div>

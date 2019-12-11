@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CompletedLevelHistory;
 use App\Level;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class LevelController extends Controller
      */
     public function index()
     {
-        $levels = Level::all();
+        $levels = Level::orderBy('level_number', 'desc')->get();
         return view('admin.pages.view-levels',['levels' => $levels]);
     }
 
@@ -101,5 +102,20 @@ class LevelController extends Controller
     public function destroy(Level $level)
     {
         //
+    }
+
+    public function startLevel(Level $level, Request $request){
+        $this->validate($request,[
+            'starting_date' => ['required', 'date']
+        ]);
+
+        $level->starting_time = $request->starting_date;
+        $level->save();
+
+        return back()->with([
+            'message' => 'starting date updated successfully',
+            'alert-type' => 'success'
+            ]);
+
     }
 }

@@ -30,5 +30,9 @@ class Level extends Model
         return $this->hasMany(User::class, 'level_number', 'level_number');
     }
 
+    public function getRouteKeyName()
+    {
+        return 'level_number';
+    }
 
 }

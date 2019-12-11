@@ -46,7 +46,7 @@
                             </span>
                         </div>
                     </div>
-                    @hasStartedLevel
+                    @hasStartedLevel(auth()->user()->level_number)
                     <div class="buy-ticket all-text-white hidden-sm hidden-xs">
                             <a href="{{ route('learders-board') }}" class="btn base-bg">Leader Board</a>
                             <div class="pdt15">check all score</div>
@@ -60,7 +60,7 @@
                     @endhasStartedLevel
 
                 </div>
-                @hasStartedLevel
+                @hasStartedLevel(auth()->user()->level_number)
                     <section>
                         <h3 class="text-center base-color">Copy Your Referral Link</h3>
                         <div class="newsletter-form">
@@ -87,6 +87,18 @@
                     </div> --}}
                 </section>
                 @endhasStartedLevel
+                <section class="mb20">
+                    <div class="alert alert-success alert-dismissible show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="alert-heading text-center">Hey {{ auth()->user()->name }}</h4>
+                      <h3 class="text-center mb40">for you to get a certificate for level {{ auth()->user()->level_number }}</h3>
+                      <h2 class="text-center mb40">You need to score at least <span class="base-color bold">300</span></h2>
+                      <h3 class="text-center">You need to have a minimum score of 250 (25days) in responding to stories questions and minimum of 50 (10 people) in referral</h3>
+                    </div>
+                </section>
                 <section >
                         <div class="profile-details text-center mt40">
                                 <div class="col-md-4 col-sm-6 mb10">

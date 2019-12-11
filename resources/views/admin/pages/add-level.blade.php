@@ -10,11 +10,13 @@
         <li class="active">Add Level</li>
     </ol>
 </section>
-@endsection @section('content')
+@endsection
+@section('content')
 <div class="content">
     <div class="box-body pad">
         <div class="col-md-6 col-md-offset-3">
-            @include('admin.layout.error') @if (Session::has('message'))
+            @include('admin.layout.error')
+            @if (Session::has('message'))
             <div class="alert alert-{{Session::get('alert-type')}}">{{Session::get('message')}}</div>
             @endif
             <div class="box box-danger">

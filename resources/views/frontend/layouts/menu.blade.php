@@ -2,7 +2,7 @@
         <div class="container">
             <div class="menu-logo">
                 <div class="logo">
-                    <a href="index.html" class="logo-index"><img class="main-logo" src="images/logo.png" alt="" /></a>
+                    <a href="index.html" class="logo-index"><img class="main-logo" src="/images/logo.png" alt="" /></a>
                 </div>
                 <nav id="easy-menu">
                     <ul class="menu-list">
@@ -19,14 +19,14 @@
                             <ul class="dropdown">
                                 <li><a href="{{ route('users') }}">All Participants</a></li>
                                 @auth
-                                    @hasStartedLevel
+                                    @hasStartedLevel(auth()->user()->level_number)
                                     <li><a href="{{ route('learders-board') }}">Learders Board</a></li>
                                     @endhasStartedLevel
                                 @endauth
                             </ul>
                         </li>
                         @auth
-                        @hasStartedLevel
+                        @hasStartedLevel(auth()->user()->level_number)
                         <li><a href="{{ route('stories',['id' => auth()->user()->level_number]) }}">Stories</a></li>
                         @endhasStartedLevel
                         @endauth

@@ -20,7 +20,7 @@
                             <a href="#" id="story-of-the-day" class="active"><i class="fa fa-hand-rock"></i>Story Of The
                                 Day</a>
                             <a href="#" id="previous-stories"><i class="fa fa-superpowers"></i>Prev Stories</a>
-                            <a href="#" id="up-coming-stories"><i class="fa fa-bolt"></i>Next Success</a>
+                            <a href="#" id="up-coming-stories"><i class="fa fa-bolt"></i>Next Stories</a>
                         </div>
                     </div>
                     <div class="story-wrapper">

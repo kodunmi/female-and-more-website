@@ -28,8 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::if('hasStartedLevel', function(){
-            $level = auth()->user()->level_number;
+        Blade::if('hasStartedLevel', function($level){
+
             $level = Level::where('level_number',$level)->first();
 
             if($level != null){

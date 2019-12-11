@@ -2,15 +2,27 @@
 
 namespace App;
 
+use App\Notifications\Auth\VerifyEmail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Questocat\Referral\Traits\UserAffiliate;
 
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
     use UserAffiliate;
+
+    /**
+     * Send the email verification notification.
+     *
+     * @return void
+     */
+    public function sendEmailVerificationNotification(){
+        $this->notify(new VerifyEmail);
+    }
+
 
     /**
      * The attributes that are mass assignable.
