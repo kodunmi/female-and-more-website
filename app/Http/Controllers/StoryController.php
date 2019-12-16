@@ -56,7 +56,7 @@ class StoryController extends Controller
      */
     public function show(Story $story)
     {
-        return view('frontend.pages.story-detail');
+        return view('frontend.pages.story-detail',['story'=>$story]);
     }
 
     /**

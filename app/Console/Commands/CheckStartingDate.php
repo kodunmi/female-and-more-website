@@ -3,11 +3,14 @@
 namespace App\Console\Commands;
 
 use App\Level;
+use App\Notifications\LevelStart;
 use Illuminate\Support\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Notifications\Notifiable;
 
 class CheckStartingDate extends Command
 {
+    use Notifiable;
     /**
      * The name and signature of the console command.
      *
@@ -40,16 +43,15 @@ class CheckStartingDate extends Command
     public function handle()
     {
         $levels = Level::where('starting_time',  '!=',  null)->get();
-            $dt = Carbon::now();
-            $date = $dt->toDateString();
-
-            foreach ($levels as $level) {
-                if ($date == $level->starting_time) {
-                    if ($level->starting_time != 'yes') {
-                        $level->is_started = 'yes';
-                        $level->save();
-                    }
+        $dt = Carbon::now();
+        $date = $dt->toDateString();
+        foreach ($levels as $level) {
+            if ($date == $level->starting_time) {
+                if ($level->starting_time != 'yes') {
+                    $level->is_started = 'yes';
+                    $level->save();
                 }
             }
+        }
     }
 }

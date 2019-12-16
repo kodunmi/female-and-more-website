@@ -64,7 +64,7 @@
                                                 href="#">{{ $currentStory->icon_name }}</a>
                                         </h4>
                                         <p>{{ Str::limit($currentStory->icon_quote, $limit = 60, $end = '...') }}</p>
-                                        <a href="{{ route('story.detail') }}" class="btn">Read Story</a>
+                                        <a href="{{ route('story.show',['story' => $currentStory->story_number]) }}" class="btn">Read Story</a>
                                     </div>
                                 </div>
                                 <!--/.our-causes-->
@@ -115,7 +115,7 @@
                                             <h4 class="text-uppercase our-causes__title"><a
                                                     href="#">{{ $stories->icon_name }}</a></h4>
                                             <p>{{ Str::limit($stories->icon_quote, $limit = 60, $end = '...') }}</p>
-                                            <a href="#" class="btn">Read Story</a>
+                                            <a href="{{ route('story.show',['story' => $stories->story_number]) }}" class="btn">Read Story</a>
                                         </div>
                                     </div>
                                     <!--/.our-causes-->

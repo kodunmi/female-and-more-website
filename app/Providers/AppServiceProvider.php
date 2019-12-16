@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Level;
+use App\Notifications\LevelStart;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
 
@@ -11,6 +13,7 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+    use Notifiable;
     /**
      * Register any application services.
      *

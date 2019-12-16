@@ -18,6 +18,16 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
+        'App\Events\LevelEnded' => [
+            'App\Listeners\NotifyLevelParticipantsOfResult',
+            'App\Listeners\StoreParticipantsData',
+            'App\Listeners\StoreLevelDetails',
+            'App\Listeners\ResetLevel',
+            'App\Listeners\ResetLevelStories',
+            'App\Listeners\LevelParticipantsEnterNextLevel'
+
+        ],
     ];
 
     /**

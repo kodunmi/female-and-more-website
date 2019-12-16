@@ -16,6 +16,11 @@ use Illuminate\Support\Carbon;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/maildemo', function () {
+    return view('frontend.emails.result-notification-mail');
+});
 Route::get('/', 'PagesController@home')->name('fam');
 Route::get('/about-female-and-more', 'PagesController@aboutFam')->name('about');
 Route::get('/how-to-participate', 'PagesController@howToParticipate')->name('how-to-participate');
@@ -23,7 +28,6 @@ Route::get('/how-to-start-a-chapter', 'PagesController@howToStartAChapter')->nam
 Route::get('/causes', 'PagesController@causes')->name('causes');
 Route::get('/learders-board', 'PagesController@leardersBoard')->name('learders-board');
 Route::get('/gallary', 'PagesController@gallary')->name('gallary');
-Route::get('/story-detail', 'PagesController@storyDetail')->name('story.detail');
 Route::get('/users/{username}', 'PagesController@profile')->name('profile');
 Route::get('/users', 'PagesController@users')->name('users');
 
@@ -48,7 +52,8 @@ Route::prefix('admin')->middleware('auth:admin')->group(function() {
     })->name('all-users');
     Route::post('/start-level/{level}', 'LevelController@startLevel')->name('level.start');
     Route::resource('level', 'LevelController');
-    Route::resource('story', 'StoryController');
+    Route::resource('season', 'SeasonController');
+    Route::resource('story', 'StoryController')->except('show');
 });
 
 
@@ -70,6 +75,7 @@ Route::group(['middleware' => 'verified'], function () {
     Route::get('/dashboard', 'DashboardController@dashboard')->name('user.dashboard');
     Route::post('/dashboard/profile-update/{id}', 'DashboardController@profileUpdate')->name('user.update');
     Route::get('/level/{level_id}/story/{story_id}', 'StoryController@show');
+    Route::get('/stories/{story}', 'StoryController@show')->name('story.show');
 });
 
 

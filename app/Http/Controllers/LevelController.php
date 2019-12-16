@@ -47,6 +47,7 @@ class LevelController extends Controller
         $level->level_name = $request->level_name;
         $level->level_description = $request->level_description;
         $level->level_number = $request->level_number;
+        $level->season_number = 1;
         $level->save();
 
         return back()->with([
@@ -107,9 +108,11 @@ class LevelController extends Controller
     public function startLevel(Level $level, Request $request){
         $this->validate($request,[
             'starting_date' => ['required', 'date']
+            // 'season_number' => 'required'
         ]);
 
         $level->starting_time = $request->starting_date;
+        // $level->season_number = $request->season_number;
         $level->save();
 
         return back()->with([

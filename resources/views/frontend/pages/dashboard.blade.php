@@ -87,7 +87,12 @@
                     </div> --}}
                 </section>
                 @endhasStartedLevel
-                <section class="mb20">
+                <section>
+                    @foreach (auth()->user()->notifications as $notification)
+                        <div>{{ $notification->type }}</div>
+                    @endforeach
+                </section>
+                <section class="mb20 mt30">
                     <div class="alert alert-success alert-dismissible show" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>

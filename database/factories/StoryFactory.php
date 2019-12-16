@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Story::class, function (Faker $faker) {
     static $no = 1;
     return [
-        'level_id' => '2',
+        'level_id' => '1',
         'story_number' => $no++,
         'story_week_number' => $faker->numberBetween($min = 1, $max = 4),
         'icon_name' => $faker->name,

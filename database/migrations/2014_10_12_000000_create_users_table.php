@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->tinyInteger('level_number')->default('1');
+            $table->tinyInteger('season_number')->nullable();
             $table->integer('referral_score')->default('0');
             $table->integer('story_score')->default('0');
             $table->integer('total_score')->default('0');

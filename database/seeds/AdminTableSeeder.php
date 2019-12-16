@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Story;
+use App\Admin;
 
-class StoryTableSeeder extends Seeder
+class AdminTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class StoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Story::class, 3)->create();
+        factory(Admin::class, 1)->create();
     }
 }

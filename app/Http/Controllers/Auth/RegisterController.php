@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Level;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
@@ -123,8 +124,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
+        $season = Level::where('level_number', 1)->value('season_number');
         $this->updateReferrerScore();
         $this->updateTotalScore();
+
 
         $uploadedFile = $data['image'];
         $fileName =  $data['username'].'.'.$uploadedFile->getClientOriginalExtension();
@@ -139,6 +142,7 @@ class RegisterController extends Controller
             'state' => $data['state'],
             'goal_to_greatness' => $data['goal-to-greatness'],
             'image' => $fileName,
+            'season_number' => $season,
             'password' => Hash::make($data['password']),
         ]);
     }

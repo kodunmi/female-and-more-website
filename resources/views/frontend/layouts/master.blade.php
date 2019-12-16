@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>The Fund</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Bootsrap css-->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
+    {{-- notification --}}
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-notifications.min.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Magnific Popup-->
     <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}" data-turbolinks-track="true" data-turbolinks-eval="false">
     <!-- Select2 -->

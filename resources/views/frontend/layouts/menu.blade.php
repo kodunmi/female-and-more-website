@@ -39,6 +39,24 @@
                                 <li><a href="{{ route('logout') }}">Logout</a></li>
                             </ul>
                         </li>
+                        <li class="dropdown dropdown-notifications">
+                            <a href="#notifications-panel" class="dropdown-toggle" data-toggle="dropdown">
+                              <i data-count="0" class="glyphicon glyphicon-book notification-icon"></i>
+                            </a>
+                            <div class="dropdown-container">
+                              <div class="dropdown-toolbar">
+                                <div class="dropdown-toolbar-actions">
+                                  <a href="#">Mark all as read</a>
+                                </div>
+                                <h3 class="dropdown-toolbar-title">Notifications (<span class="notif-count">0</span>)</h3>
+                              </div>
+                              <ul class="dropdown-menu">
+                              </ul>
+                              <div class="dropdown-footer text-center">
+                                <a href="#">View All</a>
+                              </div>
+                            </div>
+                          </li>
                         @else
                             <li><a href="{{ route('login') }}">Account <i class="fa fa-angle-down"></i></a>
                                 <ul class="dropdown">
@@ -54,7 +72,7 @@
                <div class="donate-button-wrap">
 
                    @if (Auth::check())
-                       <span class="hidden-sm hidden-xs">{{ auth()->user()->name }}</span>
+                       <span class="hidden-sm hidden-xs hidden-1200">{{ auth()->user()->name }}</span>
                     @endif
                     <a href="#" class="hidden-lg hidden-md" id="humbarger-icon"><i class="fa fa-bars"></i> </a>
                </div>

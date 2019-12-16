@@ -15,9 +15,13 @@ class CreateHistoriesTable extends Migration
     {
         Schema::create('histories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('level_id');
             $table->bigInteger('user_id');
-            $table->string('is_completed')->default('no');
+            $table->string('user_name');
+            $table->tinyInteger('level_number');
+            $table->tinyInteger('season_number');
+            $table->integer('referral_score');
+            $table->integer('story_score');
+            $table->integer('total_score');
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ class CreateLevelsTable extends Migration
             $table->string('level_name');
             $table->text('level_description');
             $table->integer('level_number');
+            $table->integer('season_number')->nullable();
             $table->string('is_started')->default('no');
             $table->string('starting_time')->nullable();
             $table->timestamps();

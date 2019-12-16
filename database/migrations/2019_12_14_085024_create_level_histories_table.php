@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCompletedLevelHistoriesTable extends Migration
+class CreateLevelHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateCompletedLevelHistoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('completed_level_histories', function (Blueprint $table) {
+        Schema::create('level_histories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('level_number');
+            $table->bigInteger('season_number')->nullable();
             $table->integer('no_of_participants')->nullable();
             $table->integer('no_of_participants_that_did_no_complete_level')->nullable();
             $table->integer('no_of_participants_that_completed_level')->nullable();
@@ -32,6 +33,6 @@ class CreateCompletedLevelHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('completed_level_histories');
+        Schema::dropIfExists('level_histories');
     }
 }

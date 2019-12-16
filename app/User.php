@@ -30,7 +30,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'country', 'state' , 'goal_to_greatness', 'image','username','dob'
+        'name', 'email', 'password', 'country', 'state' , 'goal_to_greatness', 'image','username','dob','level_number','season_number'
     ];
 
     /**
@@ -50,4 +50,11 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function level()
+    {
+        return $this->belongsTo(Level::class, 'level_number', 'level_number');
+    }
+
 }

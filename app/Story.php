@@ -10,4 +10,9 @@ class Story extends Model
     {
         return $this->belongsTo(Level::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'story_number';
+    }
 }

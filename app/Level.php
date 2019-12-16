@@ -1,11 +1,14 @@
 <?php
 
 namespace App;
+use App\User;
 
 use Illuminate\Database\Eloquent\Model;
+use Thomasjohnkane\Snooze\Traits\SnoozeNotifiable;
 
 class Level extends Model
 {
+    use SnoozeNotifiable;
 
     public function stories()
     {
