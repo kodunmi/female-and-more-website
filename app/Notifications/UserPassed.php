@@ -35,7 +35,7 @@ class UserPassed extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -52,6 +52,21 @@ class UserPassed extends Notification implements ShouldQueue
                 'content' => $this->content,
                 'result' => $this->result
             ]);
+    }
+
+    /**
+     * Get the database representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return
+     */
+    public function toDatabase($notifiable)
+    {
+        return [
+            'name' => $this->user->name,
+            'content' => $this->content,
+            'result' => $this->result
+        ];
     }
 
     /**

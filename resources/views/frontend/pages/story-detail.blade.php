@@ -8,6 +8,15 @@
         <div class="story-image-container">
             <img class="story-image" src="{{ asset('images/story.png') }}" alt="">
         </div>
+        @if (Session::has('message'))
+            <div class="alert alert-{{Session::get('alert-type')}} alert-dismissible show text-center" role="alert" style="margin-bottom:0px;">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>{{ auth()->user()->name }}</strong> {{Session::get('message')}}
+            </div>
+        @endif
         <div class="story-header">
             <div class="day-number">
                 <p>{{ $story->story_number }}</p>
@@ -71,13 +80,16 @@
         </div>
         <div class="text-center mb30 mt20">
             @if ($story->is_current == 'yes')
-                <button data-toggle="modal" data-target="#questionModal" class="btn">Go To Question</button>
+            @hasAnswerForTheDay($story->story_number)
+                <button disabled class="btn disabled">Already answered</button>
             @else
-                <button disabled class="btn disabled">Go To Question</button>
+                <button data-toggle="modal" data-target="#questionModal" class="btn">Go To Question</button>
+            @endhasAnswerForTheDay
+            @else
+                <button disabled class="btn disabled">Day {{ $story->story_number }} has closed</button>
             @endif
 
         </div>
-
     </div>
 </div>
 <div id="questionModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -90,7 +102,7 @@
                     </button>
                 </div>
                 <div class="modal-body mx-3 justify-content-center">
-                    <form id="question-form" method="POST">
+                    <form id="question-form" method="POST" action="{{ route('response.submit',['story_number' => $story->story_number]) }}">
                         @csrf
                         <input type="hidden" id="id" value="{{ auth()->id() }}">
                         <div class="form-file">
@@ -178,7 +190,6 @@
                                 @enderror
                             </div>
                         </div>
-
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button type="submit" id="answer" class="btn btn-default">Submit</button><button class="btn btn-default"  data-dismiss="modal" aria-label="Close">Close</button>

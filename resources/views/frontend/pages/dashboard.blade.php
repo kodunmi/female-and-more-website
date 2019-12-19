@@ -58,7 +58,6 @@
                     </div>
 
                     @endhasStartedLevel
-
                 </div>
                 @hasStartedLevel(auth()->user()->level_number)
                     <section>
@@ -238,8 +237,6 @@
             </div>
         </div>
     </div>
-
-</div>
 </div>
 @endsection
 @section('js')

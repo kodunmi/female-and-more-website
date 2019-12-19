@@ -3,7 +3,7 @@
 
 <div class="main-content">
     <div class="container-fluid no-padding">
-        <div class="profile-header gradient-bg">
+        <div class="profile-header">
             <img class="profile-header-image" src="{{ asset('images/logo.png') }}" alt="">
             <div class="profile-gtg">
 
@@ -19,8 +19,7 @@
                             <div class="selector"></div>
                             <a href="#" id="story-of-the-day" class="active"><i class="fa fa-hand-rock"></i>Story Of The
                                 Day</a>
-                            <a href="#" id="previous-stories"><i class="fa fa-superpowers"></i>Prev Stories</a>
-                            <a href="#" id="up-coming-stories"><i class="fa fa-bolt"></i>Next Stories</a>
+                            <a href="#" id="previous-stories"><i class="fa fa-superpowers"></i>Previous Stories</a>
                         </div>
                     </div>
                     <div class="story-wrapper">
@@ -124,57 +123,6 @@
                                 @else
                                 <h1 class="mb30">No Previous Story</h1>
                                 @endif
-                            </div>
-                        </div>
-                        <div class="tab-content up-coming-stories pdl15 pdr15 text-center">
-                            <div class="tab-content-header">
-                                <p>Up Coming Stories</p>
-                            </div>
-                            <div class="row">
-                                @if ($level->upcomingStories->count() > 0)
-                                    @foreach ($level->upcomingStories as $upcomingStories)
-                                    <div class="col-sm-6 col-xs-12 col-md-4">
-                                            <div class="our-causes">
-                                                <div class="our-causes__image-wrap pr">
-                                                    <div class="day_no">
-                                                        <span>Story {{ $upcomingStories->story_number }}</span>
-                                                    </div>
-                                                    <img data-src="{{ asset('images/protection.png') }}" class="our-causes__image lazy"
-                                                        alt="">
-
-                                                    <div class="loader"></div>
-                                                    <div class="our-causes__percentage base-bg">
-                                                        <div class="our-causes__rised">
-                                                            WEEK &nbsp; <span class="base-color"> {{ $upcomingStories->story_week_number }} </span>
-                                                        </div>
-                                                        <div class="our-causes__goal">
-                                                            <span class="nv-color">DAY &nbsp; </span> <span> {{ $upcomingStories->story_number }} </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="our-causes__text-content text-center">
-                                                    <div class="progress-item">
-                                                        <div class="progress-bg">
-                                                            <div id='progress-one' class="progress-rate base-bg"
-                                                                data-value='80'>
-                                                            </div>
-                                                        </div>
-                                                        <span class="progress-percent">0%</span>
-                                                    </div>
-                                                    <!--/.progress-item-->
-                                                    <h4 class="text-uppercase our-causes__title"><a href="#">xxxxxx xxxxxxxx</a>
-                                                    </h4>
-                                                    <p>{{ Str::limit($upcomingStories->icon_quote, $limit = 60, $end = '...') }}</p>
-                                                    <button class="btn" disabled>Read Story</button>
-                                                </div>
-                                            </div>
-                                            <!--/.our-causes-->
-                                        </div>
-                                    @endforeach
-                                @else
-                                    <h1>No upcoming stories</h1>
-                                @endif
-
                             </div>
                         </div>
                     </div>

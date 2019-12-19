@@ -22,6 +22,8 @@ class ResetLevelStories implements ShouldQueue
     /**
      * Handle the event.
      *
+     * handles level story reset to default
+     *
      * @param  LevelEnded  $event
      * @return void
      */

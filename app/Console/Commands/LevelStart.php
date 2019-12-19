@@ -40,30 +40,46 @@ class LevelStart extends Command
      */
     public function handle()
     {
-        // $levels = Level::where('is_started', 'yes')->get();
-        // foreach ($levels as $level) {
-        //     $story = Story::where('is_current', 'yes')->where('level_id', $level->level_number)->first();
-        //     if ($story == null) {
-        //         $first_story = Story::where('level_id', $level->level_number)->orderBy('story_number', 'asc')->first();
-        //         $first_story->is_current = 'yes';
-        //         $first_story->save();
-        //     } else {
-        //         $current_story = Story::where('is_current', 'yes')->where('level_id', $level->level_number)->first();
-        //         $next_story = Story::where('level_id', $level->level_number)->where('id', '>', $current_story->id)->orderBy('id', 'asc')->first();
+       //checks if any level is running
+       $levels = Level::where('is_started', 'yes')->get();
 
-        //         if ($next_story != null) {
-        //             $next_story->is_current = 'yes';
-        //             $next_story->save();
-        //         }
+       foreach ($levels as $level) {
 
-        //         $current_story->is_current = 'no';
-        //         $current_story->is_completed = 'yes';
-        //         $current_story->save();
-        //     }
+           //checks and switch story from day to day
+           $story = Story::where('is_current', 'yes')->where('level_id', $level->level_number)->first();
 
-        //     if (Story::where('level_id', $level->level_number)->orderBy('story_number', 'desc')->value('is_completed') == 'yes') {
-        //         event(new LevelEnded($level));
-        //     }
-        // }
+           if ($story == null)
+           {
+               $first_story = Story::where('level_id', $level->level_number)->orderBy('story_number', 'asc')->first();
+
+               $first_story->is_current = 'yes';
+
+               $first_story->save();
+
+           } else {
+
+               $current_story = Story::where('is_current', 'yes')->where('level_id', $level->level_number)->first();
+
+               $next_story = Story::where('level_id', $level->level_number)->where('id', '>', $current_story->id)->orderBy('id', 'asc')->first();
+
+               if ($next_story != null)
+               {
+                   $next_story->is_current = 'yes';
+
+                   $next_story->save();
+               }
+
+               $current_story->is_current = 'no';
+
+               $current_story->is_completed = 'yes';
+
+               $current_story->save();
+           }
+           //checks if the current story is the last story of the level and fires level event
+           if (Story::where('level_id', $level->level_number)->orderBy('story_number', 'desc')->value('is_completed') == 'yes')
+           {
+               event(new LevelEnded($level));
+           }
+       }
     }
 }

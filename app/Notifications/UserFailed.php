@@ -23,8 +23,8 @@ class UserFailed extends Notification implements ShouldQueue
     public function __construct($user)
     {
         $this->user = $user;
-        $this->content = 'We are deeply sorry' . ' ' . $this->user->name . ' ' . 'you were not able to meet the criteria to complete' . $this->user->level_number.', we advice you try again in another season';
-        $this->result = 'Your Scores are referral:'.' '.$this->user->referral_score.', story response score: '.$this->user->story_score.', total score: '.$this->user->total_score;
+        $this->content = 'We are deeply sorry' . ' ' . $this->user->name . ' ' . 'you were not able to meet the criteria to complete' . $this->user->level_number . ', we advice you try again in another season';
+        $this->result = 'Your Scores are referral:' . ' ' . $this->user->referral_score . ', story response score: ' . $this->user->story_score . ', total score: ' . $this->user->total_score;
         // $this->result = '200';
     }
 
@@ -36,7 +36,7 @@ class UserFailed extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -48,12 +48,27 @@ class UserFailed extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                        ->view('frontend.emails.result-notification-mail',[
-                            'name' => $this->user->name,
-                            'content' => $this->content,
-                            'result' => $this->result
-                        ]);
+            ->view('frontend.emails.result-notification-mail', [
+                'name' => $this->user->name,
+                'content' => $this->content,
+                'result' => $this->result
+            ]);
+    }
 
+
+    /**
+     * Get the database representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return
+     */
+    public function toDatabase($notifiable)
+    {
+        return [
+            'name' => $this->user->name,
+            'content' => $this->content,
+            'result' => $this->result
+        ];
     }
 
     /**

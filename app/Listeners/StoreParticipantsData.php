@@ -21,6 +21,8 @@ class StoreParticipantsData implements ShouldQueue
     /**
      * Handle the event.
      *
+     * this stores the user level and season history for record purpose
+     *
      * @param  StoreLevelData  $event
      * @return void
      */

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AnswerSubmitRequest;
 use App\Http\Requests\CreateStoryRequest;
 use App\Story;
 use App\Level;
@@ -111,5 +112,20 @@ class StoryController extends Controller
     public function destroy(Story $story)
     {
         //
+    }
+
+    /**
+     * This is for submitting answer
+     *
+     * @param  \App\Story  $story_number
+     * @return \Illuminate\Http\Response
+     */
+    public function submitDayAnswer(AnswerSubmitRequest $request, $story_number){
+        $request->increaseUserScore()->storeResponse($story_number);
+
+        return back()->with([
+            'message' => 'your response for the day was submitted successfully',
+            'alert-type' => 'success'
+            ]);
     }
 }

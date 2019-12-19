@@ -62,9 +62,7 @@
     @include('frontend.layouts.header')
     @include('frontend.layouts.mobile-nav')
     @include('frontend.layouts.menu')
-    <div id="app">
-        @yield('content')
-    </div>
+    @yield('content')
     @include('frontend.layouts.footer')
     <!-- // End Footer  -->
     <!-- == jQuery Librery == -->

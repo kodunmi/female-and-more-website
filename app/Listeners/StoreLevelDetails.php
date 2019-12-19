@@ -24,6 +24,8 @@ class StoreLevelDetails implements ShouldQueue
     /**
      * Handle the event.
      *
+     * this handle storing of the just concluded level
+     *
      * @param  StoreLevelData  $event
      * @return void
      */

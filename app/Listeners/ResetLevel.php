@@ -21,6 +21,8 @@ class ResetLevel implements ShouldQueue
     /**
      * Handle the event.
      *
+     * handles the level reset and increment the season number by one
+     *
      * @param  LevelEnded  $event
      * @return void
      */

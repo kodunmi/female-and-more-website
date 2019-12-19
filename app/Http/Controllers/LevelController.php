@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\CompletedLevelHistory;
 use App\Level;
 use Illuminate\Http\Request;
 
@@ -105,14 +104,19 @@ class LevelController extends Controller
         //
     }
 
+      /**
+     * start a specific level
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Level  $level
+     * @return \Illuminate\Http\Response
+     */
     public function startLevel(Level $level, Request $request){
         $this->validate($request,[
             'starting_date' => ['required', 'date']
-            // 'season_number' => 'required'
         ]);
 
         $level->starting_time = $request->starting_date;
-        // $level->season_number = $request->season_number;
         $level->save();
 
         return back()->with([

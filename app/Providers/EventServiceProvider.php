@@ -23,10 +23,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\NotifyLevelParticipantsOfResult',
             'App\Listeners\StoreParticipantsData',
             'App\Listeners\StoreLevelDetails',
-            'App\Listeners\ResetLevel',
+            'App\Listeners\LevelParticipantsEnterNextLevel',
             'App\Listeners\ResetLevelStories',
-            'App\Listeners\LevelParticipantsEnterNextLevel'
-
+            'App\Listeners\ResetLevel'
         ],
     ];
 
