@@ -20,6 +20,7 @@ class EventServiceProvider extends ServiceProvider
         ],
 
         'App\Events\LevelEnded' => [
+            'App\Listeners\GenerateParticpantsCertificate',
             'App\Listeners\NotifyLevelParticipantsOfResult',
             'App\Listeners\StoreParticipantsData',
             'App\Listeners\StoreLevelDetails',

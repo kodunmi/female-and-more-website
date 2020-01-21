@@ -81,9 +81,11 @@ class StoryController extends Controller
     public function update(Request $request, Story $story)
     {
         if($request->hasFile('image')){
-            $imageUrl = $story->icon_image;
+            $filePath = 'public/story/'.$story->icon_image;
 
-            Storage::delete('public/story/'.$imageUrl);
+            if(Storage::exists($filePath)){
+                Storage::delete($filePath);
+            }
 
             $uploadedFile = $request->file('image');
             $fileName =  Hash::make($request->name).'.'.$uploadedFile->getClientOriginalExtension();

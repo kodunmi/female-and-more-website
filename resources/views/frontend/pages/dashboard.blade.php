@@ -3,7 +3,7 @@
 <snackbar></snackbar>
 <div class="main-content">
     <div class="container-fluid no-padding">
-        <div class="profile-header gradient-bg">
+        <div class="profile-header base-color">
             <img class="profile-header-image" src="{{ asset('images/logo.png') }}" alt="">
             <div class="profile-gtg">
                 <em>{!! auth()->user()->goal_to_greatness !!}</em>
@@ -36,7 +36,7 @@
                                     <span class="countdown-period">No Of Referrals</span>
                                 </span>
                                 <span class="countdown-section pdr15 pdl15">
-                                    <span class="countdown-amount">0</span>
+                                    <span class="countdown-amount">{{ auth()->user()->responses->count() }}</span>
                                     <span class="countdown-period">No Of Responses</span>
                                 </span>
                                 <span class="countdown-section pdr15 pdl15">
@@ -56,10 +56,18 @@
                             <a disabled class="btn base-bg">Leader Board</a>
                             <div class="pdt15">check all score</div>
                     </div>
-
                     @endhasStartedLevel
+
+
                 </div>
-                @hasStartedLevel(auth()->user()->level_number)
+                <div class="hidden-lg hidden-md">
+                         @include('admin.layout.error')
+                        @if (Session::has('message'))
+                        <div class="alert alert-{{Session::get('alert-type')}}">{{Session::get('message')}}</div>
+                        @endif
+                    </div>
+                <div class="col-md-8 col-sm-12">
+                    @hasStartedLevel(auth()->user()->level_number)
                     <section>
                         <h3 class="text-center base-color">Copy Your Referral Link</h3>
                         <div class="newsletter-form">
@@ -67,30 +75,30 @@
                             <button  class="btn base-bg newsletter-form__submit"  onclick="myFunction()" >COPY</button>
                         </div>
                     </section>
-                @else
-                <section>
-                    <div class="alert alert-success alert-dismissible show" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Close</span>
-                        </button>
+                    @else
+                    <section>
+                        <div class="alert alert-success alert-dismissible show" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="alert-heading text-center">Hey {{ auth()->user()->name }}</h4>
+                        <h3 class="text-center mb40">No programme is running for your level ({{ auth()->user()->level_number }}) yet</h3>
+                        <p class="text-center mb40">level {{auth()->user()->level_number }} will start soon</p>
+                        </div>
+                        {{-- <div class="alert alert-success mb40 " role="alert">
                         <h4 class="alert-heading text-center">Hey {{ auth()->user()->name }}</h4>
-                      <h3 class="text-center mb40">No programme is running for your level ({{ auth()->user()->level_number }}) yet</h3>
-                      <p class="text-center mb40">level {{auth()->user()->level_number }} will start soon</p>
-                    </div>
-                    {{-- <div class="alert alert-success mb40 " role="alert">
-                      <h4 class="alert-heading text-center">Hey {{ auth()->user()->name }}</h4>
-                      div.alert-b
-                      <h3 class="text-center mb40">No programme is running for your level ({{ auth()->user()->level_number }}) yet</h3>
-                      <p class="text-center mb40">level {{auth()->user()->level_number }} will start soon</p>
-                    </div> --}}
-                </section>
-                @endhasStartedLevel
-                <section>
+                        div.alert-b
+                        <h3 class="text-center mb40">No programme is running for your level ({{ auth()->user()->level_number }}) yet</h3>
+                        <p class="text-center mb40">level {{auth()->user()->level_number }} will start soon</p>
+                        </div> --}}
+                    </section>
+                    @endhasStartedLevel
+                {{--  <section>
                     @foreach (auth()->user()->notifications as $notification)
                         <div>{{ $notification->type }}</div>
                     @endforeach
-                </section>
+                </section>  --}}
                 <section class="mb20 mt30">
                     <div class="alert alert-success alert-dismissible show" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -124,15 +132,63 @@
                                         <i class="fa fa-calendar-times-o profile-details-font" aria-hidden="true"></i>
                                         <p>Date Of Birth</p>
                                         <h3 style="margin-left: 20px;">{{ auth()->user()->dob }}</h3>
-                                    </div>
                                 </div>
-
                             </div>
-                </section>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4 col-sm-12 widget mt20">
+                    <div>
+                        <div class="widget__heading">
+                            <h4 class="widget__title">ACTION <span class="base-color">BOARD</span></h4>
+                        </div>
+                        <form id="action-form" action="{{ route('action.store',['user_id' => auth()->id()]) }}" method="POST">
+                            @csrf
+                        <div class="form-group">
+                            @include('admin.layout.error')
+                            @if (Session::has('message'))
+                            <div class="alert alert-{{Session::get('alert-type')}}">{{Session::get('message')}}</div>
+                            @endif
+                        <label for="ab">What action did you take this week</label>
+                        <textarea type="text" rows="5" class="form-control" name="action" id="ab" required maxlength="150"></textarea>
+                        <small id="helpId" class="form-text text-muted">Tell Us The Actions You Took due to the influence of FAM</small>
 
+                        <button class="mt20 mb30 form-control btn btn-success btn-flat" type="submit">Share Action</button>
+                        </div>
+
+
+                        </form>
+
+                    </div>
+                    <div>
+                        <div class="widget">
+                            <div class="widget__heading">
+                                <h4 class="widget__title">YOUR RECENT <span class="base-color">ACTIONS</span></h4>
+                            </div>
+                            <div class="widget__text-content">
+                                <div class="upcomming-event-carousel" id="upcomming-event-carousel">
+                                    @if (auth()->user()->recentActions->count() > 0)
+                                        @foreach (auth()->user()->recentActions as $action)
+                                            <div class="upcomming-event-carousel__item">
+                                                <div style="border: 1px solid #be169a; border-radius: 5px; padding:5px">
+                                                    <p>
+                                                        {{ $action->action_text }}
+                                                    </p>
+                                                </div>
+                                            </div><!--/.upcomming-event-carousel__item-->
+                                        @endforeach
+                                    @else
+                                        <h3>You dont have any action</h3>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
-
     </div>
     <div id="changeProfileModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -240,6 +296,7 @@
 </div>
 @endsection
 @section('js')
+$("#action-form").validate();
 function myFunction() {
   /* Get the text field */
   var copyText = document.getElementById("myInput");
@@ -331,7 +388,5 @@ $('#reg-form').on('submit', function(e){
     });
 
 });
-
-
 
 @endsection

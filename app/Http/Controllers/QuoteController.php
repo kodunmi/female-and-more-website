@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Quote;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class QuoteController extends Controller
 {
@@ -14,7 +15,7 @@ class QuoteController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.view-quotes',['quotes' => Quote::all()]);
     }
 
     /**
@@ -24,7 +25,7 @@ class QuoteController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.add-quote');
     }
 
     /**
@@ -35,7 +36,28 @@ class QuoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'name' => ['required','unique:quotes,name'],
+            'quote' => ['required','string'],
+            'image' => ['required','mimes:png,jpg,jpeg','max:80']
+        ],[
+            'image.uploaded' => 'fail to upload your image,  image maximum size is 80kb'
+        ]);
+
+        $uploadedFile = $request->image;
+        $fileName =  str_slug($request->name).'.'.$uploadedFile->getClientOriginalExtension();
+        $uploadedFile->storePubliclyAs('public/quotes',$fileName);
+
+        Quote::create([
+            'name' => $request->name,
+            'quote' => $request->quote,
+            'image' => $fileName
+        ]);
+
+        return back()->with([
+            'message' => 'quote created successfully',
+            'alert-type' => 'success'
+        ]);
     }
 
     /**
@@ -80,6 +102,16 @@ class QuoteController extends Controller
      */
     public function destroy(Quote $quote)
     {
-        //
+        $filePath = 'public/quotes/'.$quote->image;
+        if(Storage::exists($filePath)){
+            Storage::delete($filePath);
+        }
+
+        $quote->delete();
+
+        return back()->with([
+            'message' => 'quote deleted successfully',
+            'alert-type' => 'success'
+        ]);
     }
 }

@@ -50,6 +50,18 @@
                     <li class="{{Route::currentRouteName() == 'story.index' ? 'active': ''}}"><a href="{{ route('story.index') }}"><i class="fa fa-circle-o"></i> View Stories</a></li>
                 </ul>
             </li>
+            <li class="treeview {{Route::currentRouteName() == 'story.create' ? 'active':''||Route::currentRouteName() == 'story.index' ? 'active':''}}">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Quote</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{Route::currentRouteName() == 'quote.create' ? 'active': ''}}"><a href="{{ route('quote.create') }}"><i class="fa fa-circle-o"></i> Add quote</a></li>
+                    <li class="{{Route::currentRouteName() == 'quote.index' ? 'active': ''}}"><a href="{{ route('quote.index') }}"><i class="fa fa-circle-o"></i> View Quotes</a></li>
+                </ul>
+            </li>
             <li class="{{Route::currentRouteName() == 'all-users' ? 'active':''}}">
                 <a href="{{ route('all-users') }}">
                     <i class="fa fa-dashboard"></i> <span>All Users</span>

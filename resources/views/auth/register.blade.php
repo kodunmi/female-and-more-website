@@ -24,7 +24,7 @@ function readURL(input) {
 
                 <div class="card-body">
                     <form id="reg-form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                        @csrf
+                       {{ csrf_field() }}
 
                         <div class="form-file">
                             <input type="file" class="inputfile" name="image" id="your_picture" required  onchange="readURL(this);" data-multiple-caption="{count} files selected" multiple />

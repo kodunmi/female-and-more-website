@@ -36,8 +36,11 @@ class AnswerSubmitRequest extends FormRequest
 
     public function increaseUserScore()
     {
-        User::find(auth()->id())->first()->increment('story_score',10);
-        User::find(auth()->id())->first()->increment('total_score',10);
+        $user = User::find(auth()->id());
+
+        $user->increment('story_score', 10);
+        $user->increment('total_score', 10);
+        $user->save();
 
         return $this;
     }

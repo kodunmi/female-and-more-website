@@ -2,31 +2,33 @@
 
 namespace App\Http\Controllers;
 
-
+use App\ActionBoard;
 use App\User;
 use App\Story;
 use App\Level;
+use App\Quote;
 
 class PagesController extends Controller
 {
     public function home()
     {
-        return view('frontend.pages.home');
+        return view('frontend.pages.home', ['quotes' => Quote::all()]);
     }
 
     public function aboutFam()
     {
-        return view('frontend.pages.aboutFam');
+
+        return view('frontend.pages.aboutFam',['actions' => ActionBoard::latest()->take(20)->inRandomOrder()->get()]);
     }
 
     public function howToParticipate()
     {
-        return view('frontend.pages.howToParticipate');
+        return view('frontend.pages.howToParticipate',['actions' => ActionBoard::latest()->take(20)->inRandomOrder()->get()]);
     }
 
     public function howToStartAChapter()
     {
-        return view('frontend.pages.howToStartAChapter');
+        return view('frontend.pages.howToStartAChapter',['actions' => ActionBoard::latest()->take(20)->inRandomOrder()->get()]);
     }
 
     public function causes()
@@ -84,5 +86,11 @@ class PagesController extends Controller
 
 
         return view('frontend.pages.stories',['level' => $level]);
+     }
+
+     public function allActions(){
+
+        $actions = ActionBoard::inRandomOrder()->paginate(30);
+         return view('frontend.pages.all-actions',['actions' => $actions]);
      }
 }

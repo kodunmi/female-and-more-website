@@ -2,12 +2,13 @@
 
 namespace App;
 use App\User;
-
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Thomasjohnkane\Snooze\Traits\SnoozeNotifiable;
 
 class Level extends Model
 {
+    use Notifiable;
     use SnoozeNotifiable;
 
     public function stories()

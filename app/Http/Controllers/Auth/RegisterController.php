@@ -105,7 +105,7 @@ class RegisterController extends Controller
             'dob' => 'required',
             'state' => ['required', 'string', 'max:255'],
             'goal-to-greatness' => ['required', 'string', 'max:80'],
-            'image' => ['mimes:jpeg,png,jpg', 'required', 'max:50'],
+            'image' => ['mimes:jpeg,png,jpg', 'required', 'max:80'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ],[

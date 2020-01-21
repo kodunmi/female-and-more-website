@@ -40,7 +40,7 @@ class CreateStoryRequest extends FormRequest
 
     public function storeStoryImage(){
         $uploadedFile = $this->image;
-        $this->fileName =  Hash::make($this->name).'.'.$uploadedFile->getClientOriginalExtension();
+        $this->fileName =  str_slug($this->name).'.'.$uploadedFile->getClientOriginalExtension();
         $uploadedFile->storePubliclyAs('public/story',$this->fileName);
         return $this;
     }

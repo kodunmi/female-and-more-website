@@ -191,6 +191,9 @@
 														<tr>
 															<td class="text" style="padding-bottom: 26px; color:#666666; font-family:Arial, sans-serif; font-size:16px; line-height:30px; text-align:left; min-width:auto !important;">{{ $result }}</td>
 														</tr>
+														<tr>
+															<td class="text" style="padding-bottom: 26px; color:#666666; font-family:Arial, sans-serif; font-size:16px; line-height:30px; text-align:left; min-width:auto !important;">Find attached your certificate for the level</td>
+														</tr>
 
 													</table>
 												</td>

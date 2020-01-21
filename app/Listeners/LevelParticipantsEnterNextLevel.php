@@ -38,26 +38,44 @@ class LevelParticipantsEnterNextLevel implements ShouldQueue
 
         foreach ($users_that_passed as $user)
         {
-            $current_level = User::where('level_number', $user->level_number)->first();
+            $current_level = User::where('level_number', $user->level_number)->where('season_number', $event->level->season_number)->first();
 
             $next_level = Level::where('id', '>', $current_level->id)->orderBy('id', 'asc')->first();
 
             if ($next_level != null) {
 
-                $user->level_number = $next_level->level_number;
+                if($next_level->is_started == 'yes'){
 
-                $user->season_number = $next_level->season_number;
+                    $user->level_number = $next_level->level_number;
 
-                $user->save();
+                    $user->season_number = $next_level->season_number + 1;
+
+                    $user->save();
+                }else{
+
+                    $user->level_number = $next_level->level_number;
+
+                    $user->season_number = $next_level->season_number;
+
+                    $user->save();
+                }
+
+
             } else {
 
                 $user->increment('level_number', 1);
+
+                $user->season_number = 1;
 
                 $user->save();
             }
         }
 
-        $users_that_failed = User::where('level_number', $event->level->level_number)->where('season_number', $event->level->season_number)->where('story_score', '<', 250)->orWhere('referral_score', '<', 50)->get();
+        //$users_that_failed = User::where('level_number', $event->level->level_number)->where('season_number', $event->level->season_number)->where('story_score', '<', 250)->orWhere('referral_score', '<', 50)->get();
+
+        $users_that_failed = User::where('level_number', $event->level->level_number)->where('season_number', $event->level->season_number)->where(function($query){
+            $query->where('story_score', '<', 250)->orWhere('referral_score', '<', 50);
+        })->get();
 
         foreach ($users_that_failed as $user)
         {

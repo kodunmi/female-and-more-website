@@ -1,5 +1,8 @@
 <?php
 
+use App\User;
+use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Routing\Console\MiddlewareMakeCommand;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +26,39 @@ Route::get('/maildemo', function () {
     return view('frontend.emails.result-notification-mail');
 });
 
+Route::get('/makecert', function () {
+
+     //return view('frontend.certificates.fam-online-cert2');
+
+    $datas = User::all()->toArray();
+
+    // dd($datas);
+    // $data = [
+    //     'name' => 'cythia morgan kuwale',
+    //     'level' => '1'
+    // ];
+
+
+    // $pdf = PDF::setPaper('A4', 'landscape')->loadView('frontend.certificates.fam-online-cert');
+    //     return $pdf->download('test.pdf');
+
+
+//    $path = Storage::isWritable('public/certificates');
+
+//    if($path){
+//        dd('yes');
+//    }else{
+//        dd('no');
+//    }
+
+    foreach($datas as $data){
+
+        $pdf = PDF::setPaper('landscape')->loadView('frontend.certificates.fam-online-cert2',$data);
+        Storage::put('public/certificates/test/'.str_slug($data['name']).'.pdf', $pdf->output());
+    }
+
+});
+
 
 /**
  * this are pages route accessable to guest
@@ -37,6 +73,7 @@ Route::get('/learders-board', 'PagesController@leardersBoard')->name('learders-b
 Route::get('/gallary', 'PagesController@gallary')->name('gallary');
 Route::get('/users/{username}', 'PagesController@profile')->name('profile');
 Route::get('/users', 'PagesController@users')->name('users');
+Route::get('/all-actions', 'PagesController@allActions')->name('action.center');
 
 
 /**
@@ -90,5 +127,5 @@ Route::group(['middleware' => 'verified'], function () {
     Route::get('/level/{level_id}/story/{story_id}', 'StoryController@show');
     Route::get('/stories/{story}', 'StoryController@show')->name('story.show');
     Route::post('/answer/{story_number}', 'StoryController@submitDayAnswer')->name('response.submit');
-
+    Route::post('action/{user_id}', 'ActionBoardController@store')->name('action.store');
 });

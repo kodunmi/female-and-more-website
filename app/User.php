@@ -57,4 +57,20 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Level::class, 'level_number', 'level_number');
     }
 
+
+    public function actions()
+    {
+        return $this->hasMany(ActionBoard::class);
+    }
+
+    public function recentActions()
+    {
+        return $this->hasMany(ActionBoard::class)->latest()->take(5);
+    }
+
+    public function responses(){
+        return $this->hasMany(Response::class)->where('level_number',auth()->user()->level_number)->where('season_number',auth()->user()->season_number);
+    }
+
+
 }

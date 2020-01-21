@@ -14,6 +14,7 @@ class UserPassed extends Notification implements ShouldQueue
     public $user;
     public $content;
     public $result;
+    public $certificatPath;
 
     /**
      * Create a new notification instance.
@@ -25,6 +26,7 @@ class UserPassed extends Notification implements ShouldQueue
         $this->user = $user;
         $this->result = 'Your Scores are referral:'.' '.$this->user->referral_score.', story response score: '.$this->user->story_score.', total score: '.$this->user->total_score;
         $this->content= 'Congratulation' . ' ' . $this->user->name . ' ' . 'you have completed level' . $this->user->level_number . ' ' . 'and meet all the conditions to get a certificate';
+        $this->certificatPath = 'storage/certificates/level'.$this->user->level_number.'-season'.$this->user->season_number.'-certificates/'.str_slug($this->user->name).'-id-'.$this->user->id.'-level-'.$this->user->level_number.'.pdf';
     }
 
     /**
@@ -41,6 +43,11 @@ class UserPassed extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      *
+     *attached the certificate created by donpdf
+     *
+     *
+     *
+     *
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
@@ -51,7 +58,8 @@ class UserPassed extends Notification implements ShouldQueue
                 'name' => $this->user->name,
                 'content' => $this->content,
                 'result' => $this->result
-            ]);
+            ])
+            ->attach(asset($this->certificatPath));
     }
 
     /**

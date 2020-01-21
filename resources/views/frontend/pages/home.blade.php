@@ -150,6 +150,7 @@
 </div><!-- END REVOLUTION SLIDER -->
 </div>
 <div class="body-overlay"></div>
+
 <section class="section-padding feature-section">
  <div class="container">
      <div class="row">
@@ -270,124 +271,6 @@
      </div>
  </div>
 </section>
-<section class="blog-section section-padding ash-white-bg">
- <div class="container">
-     <div class="row">
-         <div class="col-md-12">
-             <div class="section-heading text-center">
-                 <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">Letest  <span class="base-color">story</span></h2>
-                 <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-                 <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
-             </div>
-         </div>
-     </div>
-     <div class="row">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-sm-6 col-xs-12 col-md-4">
-                    <div class="our-causes">
-                        <div class="our-causes__image-wrap pr">
-                            <div class="day_no">
-                                <span>Story One</span>
-                            </div>
-                            <img data-src="images/stories/oke.jpg" class="our-causes__image lazy" alt="">
-
-                            <div class="loader"></div>
-                            <div class="our-causes__percentage base-bg">
-                                <div class="our-causes__rised">
-                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                </div>
-                                <div class="our-causes__goal">
-                                    <span class="nv-color">DAY &nbsp; </span> <span> ONE </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-causes__text-content text-center">
-                            <div class="progress-item">
-                                <div  class="progress-bg">
-                                    <div id='progress-one' class="progress-rate base-bg" data-value='80'>
-                                    </div>
-                                </div>
-                                <span class="progress-percent">80%</span>
-                            </div><!--/.progress-item-->
-                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            <a href="#" class="btn">Read Story</a>
-                        </div>
-                    </div><!--/.our-causes-->
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-4">
-                    <div class="our-causes">
-                        <div class="our-causes__image-wrap pr">
-                            <div class="day_no">
-                                <span>Story Two</span>
-                            </div>
-                            <img data-src="images/stories/amina.jpg" class="our-causes__image lazy" alt="">
-
-                            <div class="loader"></div>
-                            <div class="our-causes__percentage base-bg">
-                                <div class="our-causes__rised">
-                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                </div>
-                                <div class="our-causes__goal">
-                                    <span class="nv-color">DAY &nbsp; </span> <span> TWO </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-causes__text-content text-center">
-                            <div class="progress-item">
-                                <div  class="progress-bg">
-                                    <div id='progress-two' class="progress-rate base-bg" data-value='80'>
-                                    </div>
-                                </div>
-                                <span class="progress-percent">80%</span>
-                            </div><!--/.progress-item-->
-                            <h4 class="text-uppercase our-causes__title"><a href="#">amina slaoui</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            <a href="#" class="btn">Read Story</a>
-                        </div>
-                    </div><!--/.our-causes-->
-                </div>
-                <div class="col-sm-6 col-xs-12 col-md-4">
-                    <div class="our-causes">
-                        <div class="our-causes__image-wrap pr">
-                            <div class="day_no">
-                                <span>Story Three</span>
-                            </div>
-                            <img data-src="images/stories/stella.jpg" class="our-causes__image lazy" alt="">
-
-                            <div class="loader"></div>
-                            <div class="our-causes__percentage base-bg">
-                                <div class="our-causes__rised">
-                                    WEEK  &nbsp; <span class="base-color"> ONE </span>
-                                </div>
-                                <div class="our-causes__goal">
-                                    <span class="nv-color">DAY &nbsp; </span> <span> THREE </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="our-causes__text-content text-center">
-                            <div class="progress-item">
-                                <div  class="progress-bg">
-                                    <div id='progress-three' class="progress-rate base-bg" data-value='80'>
-                                    </div>
-                                </div>
-                                <span class="progress-percent">80%</span>
-                            </div><!--/.progress-item-->
-                            <h4 class="text-uppercase our-causes__title"><a href="#">oke maduewesi</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consect adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            <a href="#" class="btn">Read Story</a>
-                        </div>
-                    </div><!--/.our-causes-->
-                </div>
-            </div>
-            <div class="fund-pagination mb30">
-                <a href="#" class="next">Read All</a>
-            </div>
-        </div>
-    </div>
- </div>
-</section>
 <section class="testimonial-section section-padding">
  <div class="container">
      <div class="row">
@@ -402,87 +285,78 @@
      <div class="row">
          <div class="col-md-12">
              <div class="fund-testimonial-carousel wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
-                 <div class="fund-testimonial">
+                @foreach ($quotes as $quote)
+                    <div class="fund-testimonial">
                      <div class="fund-testimonial__quote base-bg">
-                         Lorem ipsum dolor sit amet, consectetur adipi is scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim  minim veniam, quis nostrud exercitation.
+                         {{ $quote->quote }}
                      </div>
                      <div class="fund-testimonial__author">
                          <div class="fund-testimonial__author-image pr">
-                             <img src="images/home/testimonial-1.jpg"  alt="">
-
+                             <img src="{{ asset('storage/quotes/'.$quote->image) }}"  alt="">
                          </div>
                          <div class="fund-testimonial__author-text">
-                             <h4 class="fund-testimonial__author-name">JAMES WATSON</h4>
-                             <span class="fund-testimonial__designation">Donator</span>
+                             <h4 class="fund-testimonial__author-name">{{ $quote->name }}</h4>
                          </div>
                      </div>
                  </div>
-                 <div class="fund-testimonial">
-                     <div class="fund-testimonial__quote base-bg">
-                         Lorem ipsum dolor sit amet, consectetur adipi is scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim  minim veniam, quis nostrud exercitation.
-                     </div>
-                     <div class="fund-testimonial__author">
-                         <div class="fund-testimonial__author-image pr">
-                             <img src="images/home/testimonial-2.jpg" alt="">
+                @endforeach
 
-                         </div>
-                         <div class="fund-testimonial__author-text">
-                             <h4 class="fund-testimonial__author-name">DELAINE FEGLEY</h4>
-                             <span class="fund-testimonial__designation">Donator</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="fund-testimonial">
-                     <div class="fund-testimonial__quote base-bg">
-                         Lorem ipsum dolor sit amet, consectetur adipi is scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim  minim veniam, quis nostrud exercitation.
-                     </div>
-                     <div class="fund-testimonial__author">
-                         <div class="fund-testimonial__author-image pr">
-                             <img src="images/home/testimonial-3.jpg" alt="">
-
-                         </div>
-                         <div class="fund-testimonial__author-text">
-                             <h4 class="fund-testimonial__author-name">TONI MARSAL</h4>
-                             <span class="fund-testimonial__designation">Donator</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="fund-testimonial">
-                     <div class="fund-testimonial__quote base-bg">
-                         Lorem ipsum dolor sit amet, consectetur adipi is scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim  minim veniam, quis nostrud exercitation.
-                     </div>
-                     <div class="fund-testimonial__author">
-                         <div class="fund-testimonial__author-image pr">
-                             <img src="images/home/testimonial-1.jpg" alt="">
-
-                         </div>
-                         <div class="fund-testimonial__author-text">
-                             <h4 class="fund-testimonial__author-name">JAMES WATSON</h4>
-                             <span class="fund-testimonial__designation">Donator</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="fund-testimonial">
-                     <div class="fund-testimonial__quote base-bg">
-                         Lorem ipsum dolor sit amet, consectetur adipi is scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim  minim veniam, quis nostrud exercitation.
-                     </div>
-                     <div class="fund-testimonial__author">
-                         <div class="fund-testimonial__author-image pr">
-                             <img src="images/home/testimonial-2.jpg" alt="">
-
-                         </div>
-                         <div class="fund-testimonial__author-text">
-                             <h4 class="fund-testimonial__author-name">TONI MARSAL</h4>
-                             <span class="fund-testimonial__designation">Donator</span>
-                         </div>
-                     </div>
-                 </div>
              </div>
          </div>
      </div>
  </div>
 </section>
-<section class="sponser-section section-padding ash-white-bg">
+<section class="counter-section all-text-white section-padding lazy" data-src="images/about/counter-bg.jpg">
+    <div class="container">
+        <div class="row pdt15">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counter-item">
+                    <div class="counter-item__icon-wrap">
+                        <img src="images/about/levels.png" class="counter-item__icon" alt="">
+                        <span class="counter-item__label">Levels</span>
+                    </div>
+                    <div class="counter-item__count-wrap">
+                         <span class="counterup-nums">3</span>
+                    </div>
+                </div><!--/.counter-item-->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counter-item">
+                    <div class="counter-item__icon-wrap">
+                        <img src="images/about/icon-hand.png" class="counter-item__icon" alt="">
+                        <span class="counter-item__label">Seasons</span>
+                    </div>
+                    <div class="counter-item__count-wrap">
+                        <span class="counterup-nums">20</span>+
+                    </div>
+                </div><!--/.counter-item-->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counter-item">
+                    <div class="counter-item__icon-wrap">
+                        <img src="images/about/icon-man.png" class="counter-item__icon" alt="">
+                        <span class="counter-item__label">Registered Female</span>
+                    </div>
+                    <div class="counter-item__count-wrap">
+                        <span class="counterup-nums">40000</span>+
+                    </div>
+                </div><!--/.counter-item-->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counter-item">
+                    <div class="counter-item__icon-wrap">
+                        <img src="images/about/icon-country.png" class="counter-item__icon" alt="">
+                        <span class="counter-item__label">Chapters</span>
+                    </div>
+                    <div class="counter-item__count-wrap">
+                        <span class="counterup-nums">20</span>+
+                    </div>
+                </div><!--/.counter-item-->
+            </div>
+        </div>
+    </div>
+</section>
+{{--  <section class="sponser-section section-padding ash-white-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -532,5 +406,17 @@
             </div>
         </div>
     </div>
-</section>
+</section>  --}}
+@endsection
+
+@section('js')
+     /** =====================================
+    * Counter
+    * =====================================***/
+    if( $('.counterup-nums').length){
+        $('.counterup-nums').counterUp({
+            delay: 10,
+            time: 3000
+        });
+    }
 @endsection

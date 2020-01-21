@@ -35,7 +35,7 @@
                                         <div class="day_no">
                                             <span>Story {{ $currentStory->story_number }}</span>
                                         </div>
-                                        <img data-src="{{ asset('images/story.png') }}" class="our-causes__image lazy"
+                                        <img data-src="{{ asset('storage/story/'.$currentStory->icon_image) }}" class="our-causes__image lazy"
                                             alt="">
 
                                         <div class="loader"></div>
@@ -87,7 +87,7 @@
                                             <div class="day_no">
                                                 <span>Story {{ $stories->story_number }}</span>
                                             </div>
-                                            <img data-src="{{ asset('images/story.png') }}" class="our-causes__image lazy"
+                                            <img data-src="{{ asset('storage/story/'.$stories->icon_image) }}" class="our-causes__image lazy"
                                                 alt="">
                                             <div class="loader"></div>
                                             <div class="our-causes__percentage base-bg">

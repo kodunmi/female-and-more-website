@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Story;
+use Thomasjohnkane\Snooze\ScheduledNotification;
+use Illuminate\Support\Carbon;
 use App\Level;
 use Illuminate\Http\Request;
 
 class LevelController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -116,8 +120,36 @@ class LevelController extends Controller
             'starting_date' => ['required', 'date']
         ]);
 
+        $stories = $level->stories()->count();
+
+        if($stories < 2){
+            return back()->with([
+                'message' => 'to start a level, the level must have at least two stories. This level has '.$stories.' stories',
+                'alert-type' => 'danger'
+                ]);
+        }
+
         $level->starting_time = $request->starting_date;
         $level->save();
+
+
+        // this notify level participant 3 and a day before the level starts
+        foreach($level->participants as $user){
+
+            $date = Carbon::parse($level->starting_time);
+
+        //     ScheduledNotification::create(
+        //         $user, // Target
+        //         new LevelStart($level), // Notification
+        //         $date->subDays(3) // Send At
+        //    );
+        //     ScheduledNotification::create(
+        //         $user, // Target
+        //         new LevelStart($level), // Notification
+        //         $date->subDays(1) // Send At
+        //    );
+
+        }
 
         return back()->with([
             'message' => 'starting date updated successfully',

@@ -17,6 +17,10 @@ body {
     height: 100%
 }
 
+.mb30 {
+    margin-bottom: 30px;
+}
+
 body {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;

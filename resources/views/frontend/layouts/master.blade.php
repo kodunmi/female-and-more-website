@@ -79,6 +79,10 @@
     <script src="/frontend/js/slick.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Image Lazy Load == -->
     <script src="/frontend/js/jquery.lazy.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+     <!-- == waypoint == -->
+    <script src="/frontend/js/jquery.waypoints.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
+     <!-- == countup == -->
+    <script src="/frontend/js/jquery.counterup.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Wow js == -->
     <script src="/frontend/js/wow.min.js" data-turbolinks-track="true" data-turbolinks-eval="false"></script>
     <!-- == Notiny js == -->

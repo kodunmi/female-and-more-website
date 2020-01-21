@@ -231,6 +231,10 @@ img {
     display: inline-block;
 }
 
+.disb {
+    display: block;
+}
+
 .fix {
     overflow: hidden;
 }
@@ -813,6 +817,10 @@ hr {
 
 .max-width-630 {
     max-width: 630px;
+}
+
+.mh30 {
+    min-height: 110px;
 }
 
 
@@ -4602,6 +4610,12 @@ hr {
 
 .event-detial-wrap .image-wrap {
     min-height: 400px;
+}
+
+@media (max-width: 767px) {
+    .event-detial-wrap .image-wrap {
+        min-height: 200px;
+    }
 }
 
 .blog-details-image,
